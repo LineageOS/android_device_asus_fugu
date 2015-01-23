@@ -39,12 +39,20 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 MALLOC_SVELTE := true
 
+# Inline kernel building
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := x86_64-linux-androidkernel-
+TARGET_KERNEL_CONFIG := fugu_defconfig
+TARGET_KERNEL_SOURCE := kernel/asus/fugu
+TARGET_KERNEL_ARCH := x86_64
+BOARD_KERNEL_IMAGE_NAME := bzImage
+
 # Kernel cmdline
 BOARD_KERNEL_CMDLINE := pci=noearly vmalloc=256M ptrace.ptrace_can_access=1
 BOARD_KERNEL_CMDLINE += earlyprintk=nologger loglevel=8
 BOARD_KERNEL_CMDLINE += androidboot.hardware=fugu androidboot.serialno=01234567890123456789
 BOARD_KERNEL_CMDLINE += snd_pcm.maximum_substreams=8
 BOARD_KERNEL_CMDLINE += intel_soc_pmu.enable_s3=0
+BOARD_KERNEL_CMDLINE += androidboot.selinux=disabled
 
 # Custom dumpstate library to add board specific stuff to bugreport
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.fugu
@@ -87,8 +95,6 @@ BOARD_USES_TINY_ALSA_AUDIO := true
 # System's VSYNC phase offsets in nanoseconds
 VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 5000000
-
-BOARD_EGL_CFG := device/asus/fugu/egl.cfg
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.opengles.version = 196609 \
