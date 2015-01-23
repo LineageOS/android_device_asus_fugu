@@ -1,0 +1,24 @@
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1080
+TARGET_SCREEN_WIDTH := 1920
+
+# Inherit some common CM stuff.
+$(call inherit-product, vendor/cm/config/common_full_tv.mk)
+
+# Inherit device configuration
+$(call inherit-product, device/asus/fugu/aosp_fugu.mk)
+
+## Device identifier. This must come after all inclusions
+PRODUCT_NAME := cm_fugu
+PRODUCT_BRAND := google
+PRODUCT_MODEL := Nexus Player
+PRODUCT_MANUFACTURER := Asus
+
+# Device was launched with 5.0
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.first_api_level=21
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=fugu \
+    BUILD_FINGERPRINT=google/fugu/fugu:7.0/NRD90M/3085278:user/release-keys \
+    PRIVATE_BUILD_DESC="fugu-user 7.0 NRD90M 3085278 release-keys"
