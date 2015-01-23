@@ -1,0 +1,10 @@
+[
+  {
+    "repository": "android_device_google_atv",
+    "target_path": "device/google/atv"
+  },
+  {
+    "repository": "android_kernel_asus_fugu",
+    "target_path": "kernel/asus/fugu"
+  }
+]
