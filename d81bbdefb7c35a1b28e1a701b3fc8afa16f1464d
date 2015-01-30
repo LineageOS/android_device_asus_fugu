@@ -88,6 +88,24 @@
       "revId": "d81bbdefb7c35a1b28e1a701b3fc8afa16f1464d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fad55976_3faa4ad5",
+        "filename": "overlay-cm/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 8640
+      },
+      "writtenOn": "2015-01-30T17:29:05Z",
+      "side": 1,
+      "message": "Just Nexus 6 I guess, and some of mine and hashcode\u0027s devices.",
+      "parentUuid": "fad55976_df620ed8",
+      "revId": "d81bbdefb7c35a1b28e1a701b3fc8afa16f1464d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
