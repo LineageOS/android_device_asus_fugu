@@ -70,6 +70,24 @@
       "revId": "d81bbdefb7c35a1b28e1a701b3fc8afa16f1464d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fad55976_9faff6e2",
+        "filename": "overlay-cm/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 848
+      },
+      "writtenOn": "2015-01-30T17:29:05Z",
+      "side": 1,
+      "message": "Then it should be changed. fuuu dhacker29 :)",
+      "parentUuid": "fad55976_ff9f12b2",
+      "revId": "d81bbdefb7c35a1b28e1a701b3fc8afa16f1464d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
