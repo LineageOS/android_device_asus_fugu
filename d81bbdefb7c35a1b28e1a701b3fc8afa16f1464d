@@ -142,6 +142,24 @@
       "revId": "d81bbdefb7c35a1b28e1a701b3fc8afa16f1464d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fad55976_9fdd3673",
+        "filename": "overlay-cm/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 8640
+      },
+      "writtenOn": "2015-01-30T18:01:03Z",
+      "side": 1,
+      "message": "Yeah that\u0027s a copypasta on my part, one should be config_deviceHardwareKeys. But if these overlays are truly ONLY cm specific then there shouldn\u0027t be anything that AOSP would ever duplicate. Either way my $.02 over lol",
+      "parentUuid": "fad55976_ffed5226",
+      "revId": "d81bbdefb7c35a1b28e1a701b3fc8afa16f1464d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
