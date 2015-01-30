@@ -124,6 +124,24 @@
       "revId": "d81bbdefb7c35a1b28e1a701b3fc8afa16f1464d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fad55976_ffed5226",
+        "filename": "overlay-cm/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 848
+      },
+      "writtenOn": "2015-01-30T17:48:16Z",
+      "side": 1,
+      "message": "The merge conflict is trivial in this case. My fear (outside of breaking standard op for CM) is that we end up in a state where this file and the AOSP one overlay the same item, causing issues or inconsistent behavior. Fear mongering a bit, but i\u0027d like to avoid that possibility.",
+      "parentUuid": "fad55976_9f96d692",
+      "revId": "d81bbdefb7c35a1b28e1a701b3fc8afa16f1464d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
