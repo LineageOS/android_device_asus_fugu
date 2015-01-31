@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fad55976_1574859a",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-01-31T12:00:28Z",
+      "side": 1,
+      "message": "Nexus player has a volume key? o__0",
+      "revId": "d3e504d42e833c23684b57fc51f9bcf0a39cde03",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fad55976_f578d191",
+        "filename": "recovery/recovery_ui.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-01-31T12:00:28Z",
+      "side": 1,
+      "message": "You probably want to just delete this, rather than comment out.",
+      "revId": "d3e504d42e833c23684b57fc51f9bcf0a39cde03",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
