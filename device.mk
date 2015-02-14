@@ -88,6 +88,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/asus/fugu/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
+PRODUCT_CHARACTERISTICS := tablet,nosdcard
+
 # IMG graphics
 PRODUCT_PACKAGES += \
     IMG_graphics \
