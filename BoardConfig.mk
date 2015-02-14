@@ -41,6 +41,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 MALLOC_IMPL := dlmalloc
 
 # Inline kernel building
+TARGET_KERNEL_BUILT_FROM_SOURCE := true
 TARGET_KERNEL_CONFIG := fugu_defconfig
 TARGET_KERNEL_SOURCE := kernel/asus/fugu
 TARGET_KERNEL_ARCH := x86_64
