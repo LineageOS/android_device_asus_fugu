@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bacf61ea_b0a7834e",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-02-14T16:37:17Z",
+      "side": 1,
+      "message": "There\u0027s something that consumes this flag?",
+      "revId": "1cde36a412d29b4fe63c929e431b41a38215b291",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bacf61ea_1063ef1b",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-02-14T16:37:17Z",
+      "side": 1,
+      "message": "Not related to building kernel inline.",
+      "revId": "1cde36a412d29b4fe63c929e431b41a38215b291",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
