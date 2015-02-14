@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-KERNEL_SRC_DIR ?= linux/kernel-fugu
+KERNEL_SRC_DIR ?= kernel/asus/fugu
 KERNEL_CFG_NAME ?= fugu
 TARGET_KERNEL_ARCH ?= x86_64
 
