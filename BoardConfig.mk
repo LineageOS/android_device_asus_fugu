@@ -26,6 +26,9 @@ DEVICE_PATH := device/asus/fugu
 TARGET_ARCH := x86
 TARGET_ARCH_VARIANT := silvermont
 TARGET_CPU_ABI := x86
+TARGET_CPU_ABI2 := armeabi-v7a
+TARGET_CPU_ABI_LIST := x86,armeabi-v7a,armeabi
+TARGET_CPU_ABI_LIST_32_BIT := x86,armeabi-v7a,armeabi
 
 ## Audio
 BOARD_USES_ALSA_AUDIO := true
