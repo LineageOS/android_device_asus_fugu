@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3ac371cc_ff5c38ef",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 8640
+      },
+      "writtenOn": "2015-04-10T17:55:22Z",
+      "side": 1,
+      "message": "I think the key code for that button would need to be added to frameworks, haven\u0027t investigated that far yet.",
+      "parentUuid": "3ac371cc_7f5208df",
+      "revId": "ad8e96132a09e347ff144f785388fa7ee0e84866",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3ac371cc_df5dfced",
         "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
         "patchSetId": 2
@@ -47,6 +65,24 @@
       "writtenOn": "2015-04-10T17:52:58Z",
       "side": 1,
       "message": "Does this get rid of the dialer?  Might be nice to keep it around for SIP calling.",
+      "revId": "ad8e96132a09e347ff144f785388fa7ee0e84866",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_5f72ac7d",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 8640
+      },
+      "writtenOn": "2015-04-10T17:55:22Z",
+      "side": 1,
+      "message": "Yes I think it does.  Still need to play around with these.",
+      "parentUuid": "3ac371cc_bf62c0ab",
       "revId": "ad8e96132a09e347ff144f785388fa7ee0e84866",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
