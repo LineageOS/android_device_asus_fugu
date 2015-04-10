@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ac371cc_7f5208df",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 10621
+      },
+      "writtenOn": "2015-04-10T17:52:58Z",
+      "side": 1,
+      "message": "What about the button on the bottom? Can we use it for something,  or does it need to be dedicated to BT device pairing?",
+      "revId": "ad8e96132a09e347ff144f785388fa7ee0e84866",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_df5dfced",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 10621
+      },
+      "writtenOn": "2015-04-10T17:52:58Z",
+      "side": 1,
+      "message": "Can we make the key on the bottom wake?",
+      "revId": "ad8e96132a09e347ff144f785388fa7ee0e84866",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ac371cc_bf62c0ab",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 10621
+      },
+      "writtenOn": "2015-04-10T17:52:58Z",
+      "side": 1,
+      "message": "Does this get rid of the dialer?  Might be nice to keep it around for SIP calling.",
+      "revId": "ad8e96132a09e347ff144f785388fa7ee0e84866",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
