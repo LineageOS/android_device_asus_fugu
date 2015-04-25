@@ -105,6 +105,9 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
 # Set the prop to enable arm native bridge
 ADDITIONAL_DEFAULT_PROPERTIES += ro.dalvik.vm.native.bridge=libhoudini.so
 
+# Set default USB interface
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.usb.config=mtp
+
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
