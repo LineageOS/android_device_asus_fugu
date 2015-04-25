@@ -102,4 +102,7 @@
     <bool name="config_hasPermanentDpad">true</bool>
 
     <bool name="config_defaultInTouchMode">false</bool>
+
+    <!-- Bollean to identify if device has no torch -->
+    <bool name="config_noTorch">true</bool>
 </resources>
