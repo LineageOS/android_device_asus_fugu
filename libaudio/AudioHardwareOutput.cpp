@@ -509,13 +509,10 @@ void AudioHardwareOutput::updateTgtDevices_l() {
 void AudioHardwareOutput::standbyStatusUpdate(bool isInStandby, bool isMCStream) {
 
     Mutex::Autolock _l1(mStreamLock);
-    bool hdmiAllowed;
-    {
-        Mutex::Autolock _l2(mSettingsLock);
-        hdmiAllowed = mSettings.hdmi.allowed;
-    }
+    Mutex::Autolock _l2(mSettingsLock);
+
     // If there is no HDMI, do nothing
-    if (hdmiAllowed && mHDMIConnected) {
+    if (mSettings.hdmi.allowed && mHDMIConnected) {
         // If a multi-channel stream goes to standy state, we must switch
         // to stereo stream. If MC comes out of standby, we must switch
         // back to MC. No special processing needed for main stream.
