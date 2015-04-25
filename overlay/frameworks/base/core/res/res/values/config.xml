@@ -102,4 +102,8 @@
     <bool name="config_hasPermanentDpad">true</bool>
 
     <bool name="config_defaultInTouchMode">false</bool>
+
+    <!-- Boolean to identify if TorchService should be enabled -->
+    <bool name="config_torchEnabled">false</bool>
+
 </resources>
