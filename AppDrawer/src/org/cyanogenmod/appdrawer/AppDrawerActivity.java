@@ -17,6 +17,7 @@
 package org.cyanogenmod.appdrawer;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -94,6 +95,7 @@ public class AppDrawerActivity extends Activity {
 		@Override
 		protected Void doInBackground(Void... params) {
 			applist = checkForLaunchIntent(packageManager.getInstalledApplications(PackageManager.GET_META_DATA));
+			Collections.sort(applist, new ApplicationInfo.DisplayNameComparator(packageManager));
 			listadaptor = new ApplicationAdapter(AppDrawerActivity.this,
 					R.layout.grid_item, applist);
 
