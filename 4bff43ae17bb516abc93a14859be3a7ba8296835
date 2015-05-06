@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a89bdaa_88a7bb4e",
+        "filename": "AppDrawer/src/org/cyanogenmod/appdrawer/AppDrawerActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2015-05-06T08:27:22Z",
+      "side": 1,
+      "message": "someone is going to murder puppies over these line lengths \u003d/",
+      "revId": "4bff43ae17bb516abc93a14859be3a7ba8296835",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
