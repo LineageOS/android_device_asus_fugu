@@ -234,12 +234,11 @@ PRODUCT_COPY_FILES += \
 
 # Key layout files
 PRODUCT_COPY_FILES += \
-    device/asus/fugu/Nexus_Remote.idc:system/usr/idc/Nexus_Remote.idc \
-    device/asus/fugu/gpio-keys.idc:system/usr/idc/gpio-keys.idc \
-    device/asus/fugu/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    device/asus/fugu/gpio-keys.kcm:system/usr/keychars/gpio-keys.kcm \
-    device/asus/fugu/Spike.kl:system/usr/keylayout/Spike.kl \
-    device/asus/fugu/Nexus_Remote.kl:system/usr/keylayout/Nexus_Remote.kl
+    device/asus/fugu/keylayout/gpio-keys.idc:system/usr/idc/gpio-keys.idc \
+    device/asus/fugu/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/asus/fugu/keylayout/gpio-keys.kcm:system/usr/keychars/gpio-keys.kcm \
+    device/asus/fugu/keylayout/Spike.kl:system/usr/keylayout/Spike.kl \
+    device/asus/fugu/keylayout/Nexus_Remote.kl:system/usr/keylayout/Nexus_Remote.kl
 
 #GFX Config
 PRODUCT_COPY_FILES += \
