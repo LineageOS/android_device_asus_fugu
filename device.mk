@@ -242,6 +242,7 @@ PRODUCT_COPY_FILES += \
     device/asus/fugu/keylayout/gpio-keys.kcm:system/usr/keychars/gpio-keys.kcm \
     device/asus/fugu/keylayout/Spike.kl:system/usr/keylayout/Spike.kl \
     device/asus/fugu/keylayout/Nexus_Remote.kl:system/usr/keylayout/Nexus_Remote.kl
+    device/asus/fugu/keylayout/keylayout/Vendor_2836_Product_0001.kl:system/usr/keylayout/keylayout/Vendor_2836_Product_0001.kl
 
 #GFX Config
 PRODUCT_COPY_FILES += \
