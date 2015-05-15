@@ -197,7 +197,7 @@ lib/libmixvbp.so
 lib/libmixvbp_vc1.so
 lib/libmixvbp_vp8.so
 lib/libOMXVideoDecoderAVCSecure.so
-lib/libremotecontrolservice.so
+-lib/libremotecontrolservice.so
 lib/libsepdrm_cc54.so
 lib/libstlport-mfx.so
 -priv-app/AtvRemoteService/AtvRemoteService.apk
