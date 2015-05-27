@@ -116,6 +116,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AppDrawer
 
+# Remove the packages not needed for TV
+PRODUCT_PACKAGES_OVERRIDES += \
+    LatinIME
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     bt_bcm4354
