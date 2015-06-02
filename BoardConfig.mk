@@ -62,6 +62,9 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.fugu
 # Binder API version
 TARGET_USES_64_BIT_BINDER := true
 
+# Enable transparent compression in the build
+TARGET_TRANSPARENT_COMPRESSION_METHOD := lz4
+
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
   ifeq ($(TARGET_BUILD_VARIANT),user)
