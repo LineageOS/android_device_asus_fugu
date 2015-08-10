@@ -106,8 +106,6 @@ BOARD_USES_TINY_ALSA_AUDIO := true
 VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 5000000
 
-BOARD_EGL_CFG := device/asus/fugu/egl.cfg
-
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.opengles.version = 196608 \
     ro.hwui.drop_shadow_cache_size = 4.0 \
