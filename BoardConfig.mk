@@ -47,6 +47,13 @@ BOARD_KERNEL_CMDLINE += androidboot.hardware=fugu androidboot.serialno=012345678
 BOARD_KERNEL_CMDLINE += snd_pcm.maximum_substreams=8
 BOARD_KERNEL_CMDLINE += intel_soc_pmu.enable_s3=0
 
+# Inline kernel building
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := x86_64-linux-android-
+TARGET_KERNEL_CONFIG := fugu_defconfig
+TARGET_KERNEL_SOURCE := kernel/asus/fugu
+TARGET_KERNEL_ARCH := x86_64
+BOARD_KERNEL_IMAGE_NAME := bzImage
+
 # Custom dumpstate library to add board specific stuff to bugreport
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.fugu
 
