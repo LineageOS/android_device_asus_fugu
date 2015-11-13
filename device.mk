@@ -102,9 +102,11 @@ PRODUCT_PACKAGES += \
     TvSettings \
     tv_input.default
 
-# Include AppDrawer
+# Include our custom apps
 PRODUCT_PACKAGES += \
-    AppDrawer
+    AppDrawer \
+    CMLeanbackCustomizer \
+    CMLeanbackWidget
 
 # Bluetooth
 PRODUCT_PACKAGES += \
