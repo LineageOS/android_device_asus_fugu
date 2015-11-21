@@ -162,6 +162,9 @@ USE_OPENGL_RENDERER := true
 # DPST
 INTEL_DPST := true
 
+# In CM we don't include the primary bootloader
+TARGET_NO_BOOTLOADER := true
+
 # bootstub as 2nd bootloader
 TARGET_BOOTLOADER_IS_2ND := true
 
