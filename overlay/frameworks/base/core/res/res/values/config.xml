@@ -71,6 +71,9 @@
     <!-- Wifi background scan support -->
     <bool name="config_wifi_background_scan_support">true</bool>
 
+    <!-- Disable default bluetooth profiles -->
+    <bool name="config_bluetooth_default_profiles">false</bool>
+
     <!-- Wifi driver stop delay -->
     <integer name="config_wifi_driver_stop_delay">5000</integer>
 
