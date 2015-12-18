@@ -58,18 +58,6 @@ ATVAudioPolicyManager::ATVAudioPolicyManager(
 {
 }
 
-float ATVAudioPolicyManager::computeVolume(audio_stream_type_t stream,
-                                           int index,
-                                           audio_devices_t device)
-{
-    // We only use master volume, so all audio flinger streams
-    // should be set to maximum
-    (void)stream;
-    (void)index;
-    (void)device;
-    return 0.0; // no attenuation == 0.0dB
-}
-
 status_t ATVAudioPolicyManager::setDeviceConnectionState(audio_devices_t device,
                                                          audio_policy_dev_state_t state,
                                                          const char *device_address,
