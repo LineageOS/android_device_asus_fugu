@@ -309,7 +309,6 @@ FUGU_DONT_DEXPREOPT_MODULES := \
     ContactsProvider \
     PrintSpooler \
     CalendarProvider \
-    CanvasPackageInstaller \
     SettingsProvider \
     ituxd \
     StatementService \
