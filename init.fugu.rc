@@ -127,8 +127,8 @@ on post-fs-data
     # Bluetooth
     setprop ro.bt.bdaddr_path "/factory/bt/bd_addr.conf"
     chmod 0660 /sys/class/rfkill/rfkill2/state
-    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill2/state
-    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill2/type
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill2/state
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill2/type
 
     # Create directory used by audio subsystem
     mkdir /data/misc/audio 0770 audio audio
@@ -199,7 +199,7 @@ service wpa_supplicant /system/bin/wpa_supplicant \
 # Bluetooth related services
 service BtFwLoader /system/bin/BtFwLoader
     class main
-    group bluetooth net_bt_stack
+    group bluetooth
     user bluetooth
     oneshot
 
