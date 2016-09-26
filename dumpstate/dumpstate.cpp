@@ -95,9 +95,11 @@ static void fugu_dump_base64(const char *path)
 
 void dumpstate_board()
 {
-    dump_file("INTERRUPTS", "/proc/interrupts");
-    dump_file("last ipanic_console", "/data/dontpanic/ipanic_console");
-    dump_file("last ipanic_threads", "/data/dontpanic/ipanic_threads");
+    Dumpstate& ds = Dumpstate::GetInstance();
+
+    ds.DumpFile("INTERRUPTS", "/proc/interrupts");
+    ds.DumpFile("last ipanic_console", "/data/dontpanic/ipanic_console");
+    ds.DumpFile("last ipanic_threads", "/data/dontpanic/ipanic_threads");
     fugu_dump_base64("/dev/snd_atvr_mSBC");
     fugu_dump_base64("/dev/snd_atvr_pcm");
 };
