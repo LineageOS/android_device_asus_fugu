@@ -218,6 +218,7 @@ PRODUCT_PACKAGES += \
     lib_driver_cmd_bcmdhd \
     hostapd \
     wificond \
+    wifilogd \
     wpa_supplicant \
     bcmdhd.cal \
     bcmdhd_sr2.cal
