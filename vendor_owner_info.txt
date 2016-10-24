@@ -20,11 +20,9 @@ system/etc/firmware/vsp.bin.0008.0000.0001:intel
 system/etc/firmware/vsp.bin.0008.0000.0002:intel
 system/etc/firmware/vsp.bin.0008.0002.0001:intel
 system/etc/firmware/vsp.bin.000c.0001.0001:intel
-system/etc/permissions/com.google.widevine.software.drm.xml:widevine
 system/etc/vp9_interpredict.binary:intel
 system/etc/wifi/bcmdhd.cal:broadcom
 system/etc/wifi/bcmdhd_sr2.cal:broadcom
-system/framework/com.google.widevine.software.drm.jar:widevine
 system/lib/arm/cpuinfo:intel
 system/lib/arm/libandroidfw.so:intel
 system/lib/arm/libandroid_runtime.so:intel
@@ -214,7 +212,6 @@ system/vendor/firmware/BCM4350C0.hcd:broadcom
 system/vendor/firmware/BCM4350C0_SR2.hcd:broadcom
 system/vendor/firmware/PR-ModelCert:intel
 system/vendor/firmware/rgx.fw.signed:intel
-system/vendor/lib/drm/libdrmwvmplugin.so:widevine
 system/vendor/lib/egl/libEGL_POWERVR_ROGUE.so:intel
 system/vendor/lib/egl/libGLESv1_CM_POWERVR_ROGUE.so:intel
 system/vendor/lib/egl/libGLESv2_POWERVR_ROGUE.so:intel
@@ -223,7 +220,6 @@ system/vendor/lib/hw/memtrack.moorefield.so:intel
 system/vendor/lib/hw/vulkan.moorefield.so:intel
 system/vendor/lib/libclangIMG.so:intel
 system/vendor/lib/libcptcompiler.so:intel
-system/vendor/lib/libdrmdecrypt.so:widevine
 system/vendor/lib/libglslcompiler.so:intel
 system/vendor/lib/libIMGegl.so:intel
 system/vendor/lib/libLLVMIMG.so:intel
@@ -237,8 +233,5 @@ system/vendor/lib/libseppr_hal.so:intel
 system/vendor/lib/libsrv_um.so:intel
 system/vendor/lib/libufwriter.so:intel
 system/vendor/lib/libusc.so:intel
-system/vendor/lib/libwvdrm_L1.so:widevine
-system/vendor/lib/libwvm.so:widevine
-system/vendor/lib/libWVStreamControlAPI_L1.so:widevine
 system/vendor/lib/mediadrm/libplayreadydrmplugin.so:asus
 system/vendor/lib/mediadrm/libwvdrmengine.so:widevine
