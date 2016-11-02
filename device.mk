@@ -83,10 +83,6 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     libaudio-resampler
 
-# http://b/15193147
-# TODO(danalbert): Remove this once stlport is dead and gone.
-PRODUCT_PACKAGES +=  libstlport
-
 USE_CUSTOM_AUDIO_POLICY := 1
 
 # specific management of audio_policy.conf
