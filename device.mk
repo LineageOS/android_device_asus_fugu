@@ -264,6 +264,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.tv.input@1.0-impl
 
+# HDMI CEC HAL
+PRODUCT_PACKAGES += \
+    android.hardware.tv.cec@1.0-impl
+
 # Debug rc files
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_COPY_FILES += \
