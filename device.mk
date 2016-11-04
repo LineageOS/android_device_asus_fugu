@@ -317,6 +317,14 @@ FUGU_DONT_DEXPREOPT_MODULES := \
     CertInstaller \
     KeyChain \
     UserDictionaryProvider
+
+# l10n builds are larger so trim further
+ifneq (,$(filter fugu_l10n, $(TARGET_PRODUCT)))
+FUGU_DONT_DEXPREOPT_MODULES += \
+    Shell \
+    Overscan
+endif
+
 $(call add-product-dex-preopt-module-config,$(FUGU_DONT_DEXPREOPT_MODULES),disable)
 
 # Some CTS tests will be skipped based on what the initial API level that
