@@ -323,7 +323,8 @@ FUGU_DONT_DEXPREOPT_MODULES := \
 ifneq (,$(filter fugu_l10n, $(TARGET_PRODUCT)))
 FUGU_DONT_DEXPREOPT_MODULES += \
     Shell \
-    Overscan
+    Overscan \
+    RemoteControlService
 endif
 
 $(call add-product-dex-preopt-module-config,$(FUGU_DONT_DEXPREOPT_MODULES),disable)
