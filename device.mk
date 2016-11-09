@@ -209,6 +209,10 @@ PRODUCT_PACKAGES += \
     dristat \
     drmstat
 
+# libion
+PRODUCT_PACKAGES += \
+    libion
+
 # Wifi
 PRODUCT_PACKAGES += \
     libwpa_client \
