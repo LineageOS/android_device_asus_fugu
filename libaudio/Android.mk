@@ -61,6 +61,8 @@ LOCAL_STATIC_LIBRARIES += libmedia_helper
 LOCAL_MODULE := libatv_audio
 LOCAL_MODULE_TAGS := optional
 
+LOCAL_CFLAGS += -Werror
+
 include $(BUILD_SHARED_LIBRARY)
 
 
@@ -87,6 +89,8 @@ LOCAL_SHARED_LIBRARIES := \
 LOCAL_MODULE := audio.primary.fugu
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE_TAGS := optional
+
+LOCAL_CFLAGS += -Werror
 
 include $(BUILD_SHARED_LIBRARY)
 
@@ -126,5 +130,7 @@ endif
 
 LOCAL_MODULE := libaudiopolicymanager
 LOCAL_MODULE_TAGS := optional
+
+LOCAL_CFLAGS += -Werror
 
 include $(BUILD_SHARED_LIBRARY)
