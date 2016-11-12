@@ -17,12 +17,14 @@
 <MediaCodecs>
     <Encoders>
         <MediaCodec name="OMX.Intel.VideoEncoder.AVC" type="video/avc" update="true">
-            <Limit name="measured-frame-rate-320x240" range="58-58" /> <!-- N=40 v95%=1.1 -->
-            <Limit name="measured-frame-rate-720x480" range="50-50" /> <!-- N=40 v95%=1.0 -->
-            <!-- measured 95%:32-53 med:33 SLOW -->
-            <Limit name="measured-frame-rate-1280x720" range="32-41" /> <!-- N=40 v95%=1.3 -->
-            <!-- measured 95%:17-28 med:17 SLOW -->
-            <Limit name="measured-frame-rate-1920x1080" range="17-22" /> <!-- N=40 v95%=1.3 -->
+            <!-- measured 96%:54-186 med:64 SLOW -->
+            <Limit name="measured-frame-rate-320x240" range="64-128" /> <!-- N=52 v96%=1.9 -->
+            <!-- measured 96%:47-80 med:52 SLOW -->
+            <Limit name="measured-frame-rate-720x480" range="51-78" /> <!-- N=52 v96%=1.3 -->
+            <!-- measured 96%:32-54 med:37 SLOW -->
+            <Limit name="measured-frame-rate-1280x720" range="32-42" /> <!-- N=52 v96%=1.3 -->
+            <!-- measured 96%:17-28 med:19 SLOW -->
+            <Limit name="measured-frame-rate-1920x1080" range="17-22" /> <!-- N=52 v95%=1.3 -->
         </MediaCodec>
         <MediaCodec name="OMX.Intel.VideoEncoder.VP8" type="video/x-vnd.on2.vp8" update="true">
             <Limit name="measured-frame-rate-640x360" range="89-89" /> <!-- N=40 v95%=1.0 -->
@@ -43,10 +45,10 @@
             <Limit name="measured-frame-rate-176x144" range="614-617" /> <!-- N=40 v93%=1.1 -->
         </MediaCodec>
         <MediaCodec name="OMX.google.vp8.encoder" type="video/x-vnd.on2.vp8" update="true">
-            <Limit name="measured-frame-rate-320x180" range="100-100" /> <!-- N=40 v95%=1.4 -->
-            <Limit name="measured-frame-rate-640x360" range="54-54" /> <!-- N=40 v95%=1.1 -->
-            <Limit name="measured-frame-rate-1280x720" range="25-25" /> <!-- N=40 v95%=1.2 -->
-            <Limit name="measured-frame-rate-1920x1080" range="12-12" /> <!-- N=40 v95%=1.2 -->
+            <Limit name="measured-frame-rate-320x180" range="100-145" /> <!-- N=54 v95%=1.4 -->
+            <Limit name="measured-frame-rate-640x360" range="54-61" /> <!-- N=54 v95%=1.2 -->
+            <Limit name="measured-frame-rate-1280x720" range="25-33" /> <!-- N=54 v95%=1.3 -->
+            <Limit name="measured-frame-rate-1920x1080" range="12-16" /> <!-- N=54 v95%=1.2 -->
         </MediaCodec>
     </Encoders>
     <Decoders>
