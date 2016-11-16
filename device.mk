@@ -303,36 +303,26 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/asus/fugu/init.fugu.countrycode.sh:system/bin/init.fugu.countrycode.sh
 
-# Get rid of dex preoptimization to save space for the system.img
+# Get rid of dex preoptimization to save space within system.img at the one
+# time cost of dexing on first boot.  This list can be found by running:
+# grep odex $ANDROID_PRODUCT_OUT/installed-files.txt
 # Sorted by *.odex size
 FUGU_DONT_DEXPREOPT_MODULES := \
     NoTouchAuthDelegate \
+    RemoteControlService \
+    SystemUI \
     ConfigUpdater \
+    Bluetooth \
     SecondScreenSetup \
     SecondScreenSetupAuthBridge \
     TvSettings \
-    SetupWraith \
-    GooglePackageInstaller \
-    GoogleContactsSyncAdapter \
-    BugReportSender \
-    ContactsProvider \
-    PrintSpooler \
-    CalendarProvider \
-    SettingsProvider \
-    ituxd \
-    StatementService \
-    ExternalStorageProvider \
-    FrameworkPackageStubs \
-    CertInstaller \
-    KeyChain \
-    UserDictionaryProvider
+    SetupWraith
 
 # l10n builds are larger so trim further
 ifneq (,$(filter fugu_l10n, $(TARGET_PRODUCT)))
 FUGU_DONT_DEXPREOPT_MODULES += \
-    Shell \
-    Overscan \
-    RemoteControlService
+    GooglePackageInstaller \
+    GoogleContactsSyncAdapter
 endif
 
 $(call add-product-dex-preopt-module-config,$(FUGU_DONT_DEXPREOPT_MODULES),disable)
