@@ -103,15 +103,16 @@ Only the three quirks included above are recognized at this point:
             <Feature name="adaptive-playback" optional="yes" />
             <Limit name="concurrent-instances" max="1" />
         </MediaCodec>
-        <MediaCodec name="OMX.Intel.VideoDecoder.AVC" type="video/avc">
-            <Limit name="size" min="96x32" max="2560x1440" />
-            <Limit name="alignment" value="2x2" />
-            <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" range="12-864000" />
-            <Limit name="bitrate" range="1-50000000" />
-            <Feature name="adaptive-playback" />
-            <Limit name="concurrent-instances" max="5" />
-        </MediaCodec>
+        <!-- TODO: reenable me, b/32120194, b/32976749 -->
+        <!--<MediaCodec name="OMX.Intel.VideoDecoder.AVC" type="video/avc">-->
+            <!--<Limit name="size" min="96x32" max="2560x1440" />-->
+            <!--<Limit name="alignment" value="2x2" />-->
+            <!--<Limit name="block-size" value="16x16" />-->
+            <!--<Limit name="blocks-per-second" range="12-864000" />-->
+            <!--<Limit name="bitrate" range="1-50000000" />-->
+            <!--<Feature name="adaptive-playback" />-->
+            <!--<Limit name="concurrent-instances" max="5" />-->
+        <!--</MediaCodec>-->
         <MediaCodec name="OMX.Intel.VideoDecoder.AVC.secure" type="video/avc">
             <Limit name="size" min="96x32" max="1920x1088" />
             <Limit name="alignment" value="2x2" />
