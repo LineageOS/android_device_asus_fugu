@@ -316,13 +316,15 @@ FUGU_DONT_DEXPREOPT_MODULES := \
     SecondScreenSetup \
     SecondScreenSetupAuthBridge \
     TvSettings \
-    SetupWraith
+    SetupWraith \
+    GooglePackageInstaller
 
 # l10n builds are larger so trim further
 ifneq (,$(filter fugu_l10n, $(TARGET_PRODUCT)))
 FUGU_DONT_DEXPREOPT_MODULES += \
-    GooglePackageInstaller \
-    GoogleContactsSyncAdapter
+    GoogleContactsSyncAdapter \
+    BugReportSender \
+    ContactsProvider
 endif
 
 $(call add-product-dex-preopt-module-config,$(FUGU_DONT_DEXPREOPT_MODULES),disable)
