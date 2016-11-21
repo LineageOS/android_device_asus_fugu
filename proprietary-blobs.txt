@@ -36,11 +36,9 @@
 /system/etc/firmware/vsp.bin.0008.0000.0002
 /system/etc/firmware/vsp.bin.0008.0002.0001
 /system/etc/firmware/vsp.bin.000c.0001.0001
-/system/etc/permissions/com.google.widevine.software.drm.xml
 /system/etc/vp9_interpredict.binary
 /system/etc/wifi/bcmdhd.cal
 /system/etc/wifi/bcmdhd_sr2.cal
-/system/framework/com.google.widevine.software.drm.jar
 /system/lib/arm/cpuinfo
 /system/lib/arm/libandroidfw.so
 /system/lib/arm/libandroid_runtime.so
@@ -230,7 +228,6 @@
 /system/vendor/firmware/BCM4350C0_SR2.hcd
 /system/vendor/firmware/PR-ModelCert
 /system/vendor/firmware/rgx.fw.signed
-/system/vendor/lib/drm/libdrmwvmplugin.so
 /system/vendor/lib/egl/libEGL_POWERVR_ROGUE.so
 /system/vendor/lib/egl/libGLESv1_CM_POWERVR_ROGUE.so
 /system/vendor/lib/egl/libGLESv2_POWERVR_ROGUE.so
@@ -239,7 +236,6 @@
 /system/vendor/lib/hw/vulkan.moorefield.so
 /system/vendor/lib/libclangIMG.so
 /system/vendor/lib/libcptcompiler.so
-/system/vendor/lib/libdrmdecrypt.so
 /system/vendor/lib/libglslcompiler.so
 /system/vendor/lib/libIMGegl.so
 /system/vendor/lib/libLLVMIMG.so
@@ -253,8 +249,5 @@
 /system/vendor/lib/libsrv_um.so
 /system/vendor/lib/libufwriter.so
 /system/vendor/lib/libusc.so
-/system/vendor/lib/libwvdrm_L1.so
-/system/vendor/lib/libwvm.so
-/system/vendor/lib/libWVStreamControlAPI_L1.so
 /system/vendor/lib/mediadrm/libplayreadydrmplugin.so
 /system/vendor/lib/mediadrm/libwvdrmengine.so
