@@ -189,7 +189,7 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/armnb/libutils.so:system/lib/arm/nb/libutils.so:intel \
     vendor/intel/fugu/proprietary/armnb/libz.so:system/lib/arm/nb/libz.so:intel \
     vendor/intel/fugu/proprietary/keystore.moorefield.so:system/lib/hw/keystore.moorefield.so:intel \
-    vendor/intel/fugu/proprietary/libDecoderVP9Hybrid.so:system/lib/libDecoderVP9Hybrid.so:intel \
+    vendor/intel/fugu/proprietary/libDecoderVP9Hybrid.so:system/vendor/lib/libDecoderVP9Hybrid.so:intel \
     vendor/intel/fugu/proprietary/libdx_cc7.so:system/lib/libdx_cc7.so:intel \
     vendor/intel/fugu/proprietary/libgabi++-mfx.so:system/lib/libgabi++-mfx.so:intel \
     vendor/intel/fugu/proprietary/libhoudini.so:system/lib/libhoudini.so:intel \
