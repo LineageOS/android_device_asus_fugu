@@ -194,6 +194,7 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/libgabi++-mfx.so:system/lib/libgabi++-mfx.so:intel \
     vendor/intel/fugu/proprietary/libhoudini.so:system/lib/libhoudini.so:intel \
     vendor/intel/fugu/proprietary/libifp.so:system/lib/libifp.so:intel \
+    vendor/intel/fugu/proprietary/libion.so:system/lib/libion.so:intel \
     vendor/intel/fugu/proprietary/libkeymaster.so:system/lib/libkeymaster.so:intel \
     vendor/intel/fugu/proprietary/libmfx_omx_components_sw.so:system/lib/libmfx_omx_components_sw.so:intel \
     vendor/intel/fugu/proprietary/libmfx_omx_core.so:system/lib/libmfx_omx_core.so:intel \
