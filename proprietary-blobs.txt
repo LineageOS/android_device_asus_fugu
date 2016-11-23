@@ -202,6 +202,7 @@
 /system/lib/libgabi++-mfx.so
 /system/lib/libhoudini.so
 /system/lib/libifp.so
+/system/lib/libion.so
 /system/lib/libkeymaster.so
 /system/lib/libmfx_omx_components_sw.so
 /system/lib/libmfx_omx_core.so
