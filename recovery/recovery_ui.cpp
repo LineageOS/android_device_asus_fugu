@@ -40,9 +40,9 @@
 
 class FuguUI : public ScreenRecoveryUI {
   public:
-    void Init() override {
+    bool Init() override {
         SetupDisplayMode();
-        ScreenRecoveryUI::Init();
+        return ScreenRecoveryUI::Init();
     }
 
     void SetupDisplayMode() {
