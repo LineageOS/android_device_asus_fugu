@@ -49,9 +49,6 @@ BOARD_KERNEL_CMDLINE += androidboot.hardware=fugu androidboot.serialno=012345678
 BOARD_KERNEL_CMDLINE += snd_pcm.maximum_substreams=8
 BOARD_KERNEL_CMDLINE += intel_soc_pmu.enable_s3=0
 
-# Custom dumpstate library to add board specific stuff to bugreport
-BOARD_HAL_STATIC_LIBRARIES := libdumpstate.fugu
-
 # Binder API version
 TARGET_USES_64_BIT_BINDER := true
 
