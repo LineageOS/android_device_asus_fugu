@@ -90,19 +90,6 @@ SF_VSYNC_EVENT_PHASE_OFFSET_NS := 5000000
 
 BOARD_EGL_CFG := device/asus/fugu/egl.cfg
 
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.opengles.version = 196609 \
-    ro.hwui.drop_shadow_cache_size = 4.0 \
-    ro.hwui.gradient_cache_size = 0.8 \
-    ro.hwui.layer_cache_size = 32.0 \
-    ro.hwui.path_cache_size = 24.0 \
-    ro.hwui.text_large_cache_width = 2048 \
-    ro.hwui.text_large_cache_height = 1024 \
-    ro.hwui.text_small_cache_width = 1024 \
-    ro.hwui.text_small_cache_height = 512 \
-    ro.hwui.texture_cache_flushrate = 0.4 \
-    ro.hwui.texture_cache_size = 48.0 \
-
 MAX_EGL_CACHE_ENTRY_SIZE := 65536
 MAX_EGL_CACHE_SIZE := 1048576
 
@@ -125,9 +112,6 @@ MFX_IPP := p8
 
 # Video Post Processing
 TARGET_HAS_ISV := true
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    persist.intel.isv.vpp = 1 \
-    persist.intel.isv.frc = 1
 
 OVERRIDE_RS_DRIVER := libPVRRS.so
 
