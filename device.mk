@@ -318,7 +318,12 @@ FUGU_DONT_DEXPREOPT_MODULES := \
     FrameworkPackageStubs \
     CertInstaller \
     KeyChain \
-    UserDictionaryProvider
+    UserDictionaryProvider \
+    DownloadProvider \
+    Shell \
+    Overscan \
+    RemoteControlService
+
 $(call add-product-dex-preopt-module-config,$(FUGU_DONT_DEXPREOPT_MODULES),disable)
 
 # Some CTS tests will be skipped based on what the initial API level that
