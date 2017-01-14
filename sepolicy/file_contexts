@@ -9,6 +9,8 @@
 
 /system/bin/BtFwLoader       u:object_r:btfwloader_exec:s0
 
+/vendor/bin/hw/android\.hardware\.dumpstate@1\.0-service.fugu      u:object_r:hal_dumpstate_impl_exec:s0
+
 /sys/devices/pci0000:00/0000:00:01\.3/mmc_host/mmc2/mmc2:0001/mmc2:0001:2/ieee80211/phy[0-9]+/rfkill[0-9]+/type  u:object_r:sysfs_bluetooth:s0
 /sys/devices/pci0000:00/0000:00:01\.3/mmc_host/mmc2/mmc2:0001/mmc2:0001:2/rfkill/rfkill[0-9]+/type  u:object_r:sysfs_bluetooth:s0
 /sys/devices/platform/bcm_bt_lpm.0/rfkill/rfkill[0-9]/state     u:object_r:sysfs_bluetooth_writable:s0

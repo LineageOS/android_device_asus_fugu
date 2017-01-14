@@ -83,6 +83,10 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     libaudio-resampler
 
+# Dumpstate HAL
+PRODUCT_PACKAGES += \
+    android.hardware.dumpstate@1.0-service.fugu
+
 USE_CUSTOM_AUDIO_POLICY := 1
 
 # specific management of audio_policy.conf
