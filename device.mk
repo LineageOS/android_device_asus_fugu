@@ -322,7 +322,10 @@ FUGU_DONT_DEXPREOPT_MODULES := \
     DownloadProvider \
     Shell \
     Overscan \
-    RemoteControlService
+    RemoteControlService \
+    AtvCustomization \
+    GoogleExtShared \
+    AtvWidget
 
 $(call add-product-dex-preopt-module-config,$(FUGU_DONT_DEXPREOPT_MODULES),disable)
 
