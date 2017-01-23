@@ -334,7 +334,9 @@ FUGU_DONT_DEXPREOPT_MODULES := \
     DownloadProvider \
     GoogleContactsSyncAdapter \
     BugReportSender \
-    ContactsProvider
+    ContactsProvider \
+    PrintSpooler \
+    Overscan \
 
 $(call add-product-dex-preopt-module-config,$(FUGU_DONT_DEXPREOPT_MODULES),disable)
 
