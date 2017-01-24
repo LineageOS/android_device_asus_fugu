@@ -325,7 +325,9 @@ FUGU_DONT_DEXPREOPT_MODULES := \
     RemoteControlService \
     AtvCustomization \
     GoogleExtShared \
-    AtvWidget
+    AtvWidget \
+    GlobalKeyInterceptor \
+    InputDevices
 
 $(call add-product-dex-preopt-module-config,$(FUGU_DONT_DEXPREOPT_MODULES),disable)
 
