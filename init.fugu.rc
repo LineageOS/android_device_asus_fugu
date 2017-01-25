@@ -109,8 +109,6 @@ on post-fs
     copy /system/etc/security/sep_policy.conf /sys/fs/sepfs/load
     chown system system /dev/dx_sep_q0
     chmod 0666 /dev/dx_sep_q0
-    chown system system /dev/dx_sep_q1
-    chmod 0666 /dev/dx_sep_q1
 
     # hdmi cec
     chown system system /sys/module/drm_intel_mid/parameters/hdmi_state
