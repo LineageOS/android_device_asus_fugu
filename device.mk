@@ -296,7 +296,6 @@ PRODUCT_COPY_FILES += \
     device/asus/fugu/init.fugu.countrycode.sh:system/bin/init.fugu.countrycode.sh
 
 # Get rid of dex preoptimization to save space for the system.img
-# Sorted by *.odex size
 FUGU_DONT_DEXPREOPT_MODULES := \
     NoTouchAuthDelegate \
     ConfigUpdater \
@@ -327,7 +326,10 @@ FUGU_DONT_DEXPREOPT_MODULES := \
     GoogleExtShared \
     AtvWidget \
     GlobalKeyInterceptor \
-    InputDevices
+    InputDevices \
+    PacProcessor \
+    HTMLViewer \
+    GamepadPairingService
 
 $(call add-product-dex-preopt-module-config,$(FUGU_DONT_DEXPREOPT_MODULES),disable)
 
