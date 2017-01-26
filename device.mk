@@ -295,43 +295,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/asus/fugu/init.fugu.countrycode.sh:system/bin/init.fugu.countrycode.sh
 
-# Get rid of dex preoptimization to save space for the system.img
-FUGU_DONT_DEXPREOPT_MODULES := \
-    NoTouchAuthDelegate \
-    ConfigUpdater \
-    SecondScreenSetup \
-    SecondScreenSetupAuthBridge \
-    TvSettings \
-    SetupWraith \
-    GooglePackageInstaller \
-    GoogleContactsSyncAdapter \
-    BugReportSender \
-    ContactsProvider \
-    PrintSpooler \
-    CalendarProvider \
-    CanvasPackageInstaller \
-    SettingsProvider \
-    ituxd \
-    StatementService \
-    ExternalStorageProvider \
-    FrameworkPackageStubs \
-    CertInstaller \
-    KeyChain \
-    UserDictionaryProvider \
-    DownloadProvider \
-    Shell \
-    Overscan \
-    RemoteControlService \
-    AtvCustomization \
-    GoogleExtShared \
-    AtvWidget \
-    GlobalKeyInterceptor \
-    InputDevices \
-    PacProcessor \
-    HTMLViewer \
-    GamepadPairingService
-
-$(call add-product-dex-preopt-module-config,$(FUGU_DONT_DEXPREOPT_MODULES),disable)
+# Get rid of dex preoptimization to save space within system.img at the one
+# time cost of dexing on first boot.
+WITH_DEXPREOPT_BOOT_IMG_ONLY := true
 
 # Some CTS tests will be skipped based on what the initial API level that
 # shipped on device was.
