@@ -293,30 +293,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/asus/fugu/init.fugu.countrycode.sh:system/bin/init.fugu.countrycode.sh
 
-# Get rid of dex preoptimization to save space for the system.img
-# Sorted by *.odex size
-FUGU_DONT_DEXPREOPT_MODULES := \
-    NoTouchAuthDelegate \
-    ConfigUpdater \
-    SecondScreenSetup \
-    SecondScreenSetupAuthBridge \
-    TvSettings \
-    SetupWraith \
-    GooglePackageInstaller \
-    GoogleContactsSyncAdapter \
-    BugReportSender \
-    ContactsProvider \
-    PrintSpooler \
-    CalendarProvider \
-    CanvasPackageInstaller \
-    SettingsProvider \
-    ituxd \
-    StatementService \
-    ExternalStorageProvider \
-    FrameworkPackageStubs \
-    CertInstaller \
-    KeyChain \
-    UserDictionaryProvider
+# Get rid of dex preoptimization to save space within system.img at the one
+# time cost of dexing on first boot.
+WITH_DEXPREOPT_BOOT_IMG_ONLY := true
 
 # l10n builds are larger so trim further
 ifneq (,$(filter fugu_l10n, $(TARGET_PRODUCT)))
