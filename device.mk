@@ -121,6 +121,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/asus/fugu/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
+# Bluetooth HAL
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl
+
 # IMG graphics
 PRODUCT_PACKAGES += \
     IMG_graphics \
