@@ -46,7 +46,6 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/libbacktrace.so:system/lib/arm/libbacktrace.so:intel \
     vendor/intel/fugu/proprietary/libbcc.so:system/lib/arm/libbcc.so:intel \
     vendor/intel/fugu/proprietary/libbcinfo.so:system/lib/arm/libbcinfo.so:intel \
-    vendor/intel/fugu/proprietary/libbinary_parse.so:system/lib/arm/libbinary_parse.so:intel \
     vendor/intel/fugu/proprietary/libbinder.so:system/lib/arm/libbinder.so:intel \
     vendor/intel/fugu/proprietary/libblas.so:system/lib/arm/libblas.so:intel \
     vendor/intel/fugu/proprietary/libcamera2ndk.so:system/lib/arm/libcamera2ndk.so:intel \
@@ -68,7 +67,6 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/libfilterfw.so:system/lib/arm/libfilterfw.so:intel \
     vendor/intel/fugu/proprietary/libfilterpack_imageproc.so:system/lib/arm/libfilterpack_imageproc.so:intel \
     vendor/intel/fugu/proprietary/libft2.so:system/lib/arm/libft2.so:intel \
-    vendor/intel/fugu/proprietary/libgabi++.so:system/lib/arm/libgabi++.so:intel \
     vendor/intel/fugu/proprietary/libGLESv1_CM.so:system/lib/arm/libGLESv1_CM.so:intel \
     vendor/intel/fugu/proprietary/libGLESv2.so:system/lib/arm/libGLESv2.so:intel \
     vendor/intel/fugu/proprietary/libGLESv3.so:system/lib/arm/libGLESv3.so:intel \
@@ -78,7 +76,6 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/libhwui.so:system/lib/arm/libhwui.so:intel \
     vendor/intel/fugu/proprietary/libicui18n.so:system/lib/arm/libicui18n.so:intel \
     vendor/intel/fugu/proprietary/libicuuc.so:system/lib/arm/libicuuc.so:intel \
-    vendor/intel/fugu/proprietary/libimage_type_recognition.so:system/lib/arm/libimage_type_recognition.so:intel \
     vendor/intel/fugu/proprietary/libimg_utils.so:system/lib/arm/libimg_utils.so:intel \
     vendor/intel/fugu/proprietary/libinputflinger.so:system/lib/arm/libinputflinger.so:intel \
     vendor/intel/fugu/proprietary/libinput.so:system/lib/arm/libinput.so:intel \
@@ -101,13 +98,11 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/libnbaio.so:system/lib/arm/libnbaio.so:intel \
     vendor/intel/fugu/proprietary/libnetd_client.so:system/lib/arm/libnetd_client.so:intel \
     vendor/intel/fugu/proprietary/libnetutils.so:system/lib/arm/libnetutils.so:intel \
-    vendor/intel/fugu/proprietary/libnfc_ndef.so:system/lib/arm/libnfc_ndef.so:intel \
     vendor/intel/fugu/proprietary/libnl.so:system/lib/arm/libnl.so:intel \
     vendor/intel/fugu/proprietary/libOpenMAXAL.so:system/lib/arm/libOpenMAXAL.so:intel \
     vendor/intel/fugu/proprietary/libOpenSLES.so:system/lib/arm/libOpenSLES.so:intel \
     vendor/intel/fugu/proprietary/libopus.so:system/lib/arm/libopus.so:intel \
     vendor/intel/fugu/proprietary/libpackagelistparser.so:system/lib/arm/libpackagelistparser.so:intel \
-    vendor/intel/fugu/proprietary/libpcre.so:system/lib/arm/libpcre.so:intel \
     vendor/intel/fugu/proprietary/libpdfium.so:system/lib/arm/libpdfium.so:intel \
     vendor/intel/fugu/proprietary/libpiex.so:system/lib/arm/libpiex.so:intel \
     vendor/intel/fugu/proprietary/libpixelflinger.so:system/lib/arm/libpixelflinger.so:intel \
@@ -137,12 +132,10 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/libstagefright_http_support.so:system/lib/arm/libstagefright_http_support.so:intel \
     vendor/intel/fugu/proprietary/libstagefright_omx.so:system/lib/arm/libstagefright_omx.so:intel \
     vendor/intel/fugu/proprietary/libstagefright.so:system/lib/arm/libstagefright.so:intel \
-    vendor/intel/fugu/proprietary/libstagefright_yuv.so:system/lib/arm/libstagefright_yuv.so:intel \
     vendor/intel/fugu/proprietary/libstdc++.so:system/lib/arm/libstdc++.so:intel \
     vendor/intel/fugu/proprietary/libsurfaceflinger.so:system/lib/arm/libsurfaceflinger.so:intel \
     vendor/intel/fugu/proprietary/libsync.so:system/lib/arm/libsync.so:intel \
     vendor/intel/fugu/proprietary/libsysutils.so:system/lib/arm/libsysutils.so:intel \
-    vendor/intel/fugu/proprietary/libtiff_directory.so:system/lib/arm/libtiff_directory.so:intel \
     vendor/intel/fugu/proprietary/libui.so:system/lib/arm/libui.so:intel \
     vendor/intel/fugu/proprietary/libunwind.so:system/lib/arm/libunwind.so:intel \
     vendor/intel/fugu/proprietary/libusbhost.so:system/lib/arm/libusbhost.so:intel \
@@ -179,7 +172,6 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/armnb/libnativehelper.so:system/lib/arm/nb/libnativehelper.so:intel \
     vendor/intel/fugu/proprietary/armnb/libOpenMAXAL.so:system/lib/arm/nb/libOpenMAXAL.so:intel \
     vendor/intel/fugu/proprietary/armnb/libOpenSLES.so:system/lib/arm/nb/libOpenSLES.so:intel \
-    vendor/intel/fugu/proprietary/armnb/libpcre.so:system/lib/arm/nb/libpcre.so:intel \
     vendor/intel/fugu/proprietary/armnb/libpixelflinger.so:system/lib/arm/nb/libpixelflinger.so:intel \
     vendor/intel/fugu/proprietary/armnb/libskia.so:system/lib/arm/nb/libskia.so:intel \
     vendor/intel/fugu/proprietary/armnb/libsqlite.so:system/lib/arm/nb/libsqlite.so:intel \

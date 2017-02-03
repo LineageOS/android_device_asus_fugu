@@ -36,7 +36,6 @@ system/lib/arm/libbacktrace.so:intel
 system/lib/arm/libbase.so:google
 system/lib/arm/libbcc.so:intel
 system/lib/arm/libbcinfo.so:intel
-system/lib/arm/libbinary_parse.so:intel
 system/lib/arm/libbinder.so:intel
 system/lib/arm/libblas.so:intel
 system/lib/arm/libcamera2ndk.so:intel
@@ -58,7 +57,6 @@ system/lib/arm/libFFTEm.so:intel
 system/lib/arm/libfilterfw.so:intel
 system/lib/arm/libfilterpack_imageproc.so:intel
 system/lib/arm/libft2.so:intel
-system/lib/arm/libgabi++.so:intel
 system/lib/arm/libGLESv1_CM.so:intel
 system/lib/arm/libGLESv2.so:intel
 system/lib/arm/libGLESv3.so:intel
@@ -68,7 +66,6 @@ system/lib/arm/libharfbuzz_ng.so:intel
 system/lib/arm/libhwui.so:intel
 system/lib/arm/libicui18n.so:intel
 system/lib/arm/libicuuc.so:intel
-system/lib/arm/libimage_type_recognition.so:intel
 system/lib/arm/libimg_utils.so:intel
 system/lib/arm/libinputflinger.so:intel
 system/lib/arm/libinput.so:intel
@@ -91,13 +88,11 @@ system/lib/arm/libnativeloader.so:intel
 system/lib/arm/libnbaio.so:intel
 system/lib/arm/libnetd_client.so:intel
 system/lib/arm/libnetutils.so:intel
-system/lib/arm/libnfc_ndef.so:intel
 system/lib/arm/libnl.so:intel
 system/lib/arm/libOpenMAXAL.so:intel
 system/lib/arm/libOpenSLES.so:intel
 system/lib/arm/libopus.so:intel
 system/lib/arm/libpackagelistparser.so:intel
-system/lib/arm/libpcre.so:intel
 system/lib/arm/libpdfium.so:intel
 system/lib/arm/libpiex.so:intel
 system/lib/arm/libpixelflinger.so:intel
@@ -127,12 +122,10 @@ system/lib/arm/libstagefright_foundation.so:intel
 system/lib/arm/libstagefright_http_support.so:intel
 system/lib/arm/libstagefright_omx.so:intel
 system/lib/arm/libstagefright.so:intel
-system/lib/arm/libstagefright_yuv.so:intel
 system/lib/arm/libstdc++.so:intel
 system/lib/arm/libsurfaceflinger.so:intel
 system/lib/arm/libsync.so:intel
 system/lib/arm/libsysutils.so:intel
-system/lib/arm/libtiff_directory.so:intel
 system/lib/arm/libui.so:intel
 system/lib/arm/libunwind.so:intel
 system/lib/arm/libusbhost.so:intel
@@ -169,7 +162,6 @@ system/lib/arm/nb/libm.so:intel
 system/lib/arm/nb/libnativehelper.so:intel
 system/lib/arm/nb/libOpenMAXAL.so:intel
 system/lib/arm/nb/libOpenSLES.so:intel
-system/lib/arm/nb/libpcre.so:intel
 system/lib/arm/nb/libpixelflinger.so:intel
 system/lib/arm/nb/libskia.so:intel
 system/lib/arm/nb/libsqlite.so:intel
