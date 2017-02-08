@@ -1,12 +1,5 @@
 dontaudit mediacodec graphics_device:dir search;
 allow mediacodec surfaceflinger:fifo_file { read write };
 
-# TODO: STOPSHIP -- b/33344694
-# This is a temporary WAR to allow secure codecs hosted
-# in media.codec to access tee. Eventually OMX will be
-# converted to HIDL, and the secure codecs need to be
-# moved to a process that has this permission.
-
-userdebug_or_eng(`
-  allow mediacodec tee_device:chr_file r_file_perms;
-')
+# b/33344694
+allow mediacodec tee_device:chr_file r_file_perms;
