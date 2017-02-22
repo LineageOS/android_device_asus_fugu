@@ -220,7 +220,7 @@
 /system/vendor/firmware/BCM4350C0.hcd
 /system/vendor/firmware/BCM4350C0_SR2.hcd
 /system/vendor/firmware/PR-ModelCert
-/system/vendor/firmware/rgx.fw.signed
+/system/vendor/firmware/rgx.fw.signed.1.72.4.12
 /system/vendor/lib/egl/libEGL_POWERVR_ROGUE.so
 /system/vendor/lib/egl/libGLESv1_CM_POWERVR_ROGUE.so
 /system/vendor/lib/egl/libGLESv2_POWERVR_ROGUE.so
