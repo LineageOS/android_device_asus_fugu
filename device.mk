@@ -273,6 +273,10 @@ ENABLE_ITUXD := true
 PRODUCT_PACKAGES += \
     ituxd
 
+# Memtrack HAL
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl
+
 # Power HAL
 PRODUCT_PACKAGES += \
     power.fugu \
