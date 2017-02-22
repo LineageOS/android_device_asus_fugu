@@ -207,7 +207,7 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/pvrtld:system/vendor/bin/pvrtld:intel \
     vendor/intel/fugu/proprietary/rscompiler:system/vendor/bin/rscompiler:intel \
     vendor/intel/fugu/proprietary/PR-ModelCert:system/vendor/firmware/PR-ModelCert:intel \
-    vendor/intel/fugu/proprietary/rgx.fw.signed:system/vendor/firmware/rgx.fw.signed:intel \
+    vendor/intel/fugu/proprietary/rgx.fw.signed.1.72.4.12:system/vendor/firmware/rgx.fw.signed.1.72.4.12:intel \
     vendor/intel/fugu/proprietary/libEGL_POWERVR_ROGUE.so:system/vendor/lib/egl/libEGL_POWERVR_ROGUE.so:intel \
     vendor/intel/fugu/proprietary/libGLESv1_CM_POWERVR_ROGUE.so:system/vendor/lib/egl/libGLESv1_CM_POWERVR_ROGUE.so:intel \
     vendor/intel/fugu/proprietary/libGLESv2_POWERVR_ROGUE.so:system/vendor/lib/egl/libGLESv2_POWERVR_ROGUE.so:intel \
