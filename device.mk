@@ -321,6 +321,10 @@ ifneq (,$(filter userdebug, $(TARGET_BUILD_VARIANT)))
     $(call add-product-dex-preopt-module-config,wifi-service,--generate-mini-debug-info)
 endif
 
+# Run with interpreter + JIT (no AOT) for both the boot image and apps.
+PRODUCT_DEX_PREOPT_BOOT_FLAGS := --compiler-filter=interpret-only
+PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := --compiler-filter=interpret-only
+
 $(call inherit-product-if-exists, vendor/asus/fugu/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/intel/PRIVATE/fugu/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/intel/moorefield/prebuilts/houdini/houdini.mk)
@@ -337,10 +341,6 @@ PRODUCT_COPY_FILES += \
 # Wifi country code
 PRODUCT_COPY_FILES += \
     device/asus/fugu/init.fugu.countrycode.sh:system/bin/init.fugu.countrycode.sh
-
-# Get rid of dex preoptimization to save space within system.img at the one
-# time cost of dexing on first boot.
-WITH_DEXPREOPT_BOOT_IMG_ONLY := true
 
 # Some CTS tests will be skipped based on what the initial API level that
 # shipped on device was.

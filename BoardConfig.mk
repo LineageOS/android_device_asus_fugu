@@ -140,6 +140,5 @@ USE_CLANG_PLATFORM_BUILD := true
 # Recipes to generate prebuilts
 -include device/intel/common/external/external.mk
 
-# Don't dex preopt prebuilt apps that will be updated from Play Store
-DONT_DEXPREOPT_PREBUILTS := true
-
+# Disable Dex preopting altogether.
+WITH_DEXPREOPT := false
