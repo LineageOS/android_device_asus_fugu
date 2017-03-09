@@ -96,10 +96,16 @@ PRODUCT_PACKAGES += \
     android.hardware.dumpstate@1.0-service.fugu
 
 USE_CUSTOM_AUDIO_POLICY := 1
+USE_XML_AUDIO_POLICY_CONF := 1
 
 # specific management of audio_policy.conf
 PRODUCT_COPY_FILES += \
-    device/asus/fugu/audio_policy.conf:system/etc/audio_policy.conf
+    device/asus/fugu/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:system/etc/a2dp_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:system/etc/r_submix_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:system/etc/default_volume_tables.xml \
+    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:system/etc/audio_policy_volumes.xml
 
 # Hdmi CEC: Fugu works as a playback device (4).
 PRODUCT_PROPERTY_OVERRIDES += ro.hdmi.device_type=4
