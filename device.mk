@@ -296,18 +296,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.tv.cec@1.0-impl
 
-ifeq ($(ENABLE_TREBLE), true)
-PRODUCT_PACKAGES += \
-    android.hardware.tv.cec@1.0-service
-endif
-
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
-
-ifeq ($(ENABLE_TREBLE), true)
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-service
-endif
 
 # Debug rc files
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
