@@ -27,7 +27,8 @@ LOCAL_SRC_FILES := \
     HDMIAudioOutput.cpp \
     AudioHardwareInput.cpp \
     AudioStreamIn.cpp \
-    AudioHotplugThread.cpp
+    AudioHotplugThread.cpp \
+    LinearTransform.cpp
 
 LOCAL_C_INCLUDES := \
     external/tinyalsa/include \
