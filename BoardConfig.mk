@@ -48,6 +48,7 @@ BOARD_KERNEL_CMDLINE += earlyprintk=nologger loglevel=8
 BOARD_KERNEL_CMDLINE += androidboot.hardware=fugu androidboot.serialno=01234567890123456789
 BOARD_KERNEL_CMDLINE += snd_pcm.maximum_substreams=8
 BOARD_KERNEL_CMDLINE += intel_soc_pmu.enable_s3=0
+BOARD_KERNEL_CMDLINE += loop.max_part=7
 
 # Binder API version
 TARGET_USES_64_BIT_BINDER := true
