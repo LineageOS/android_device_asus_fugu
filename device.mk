@@ -127,28 +127,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.intel.isv.frc=1 \
     persist.intel.isv.vpp=1
 
-## Kernel
-KERNEL_SRC_DIR ?= linux/kernel-fugu
-KERNEL_CFG_NAME ?= fugu
-TARGET_KERNEL_ARCH ?= x86_64
-# Check for availability of kernel source
-ifneq ($(wildcard $(KERNEL_SRC_DIR)/Makefile),)
-  # Give precedence to TARGET_PREBUILT_KERNEL
-  ifeq ($(TARGET_PREBUILT_KERNEL),)
-    TARGET_KERNEL_BUILT_FROM_SOURCE := true
-  endif
-endif
-ifneq ($(TARGET_KERNEL_BUILT_FROM_SOURCE), true)
-# Use prebuilt kernel
-  ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := $(LOCAL_PATH)-kernel/bzImage
-  else
-    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-  endif
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
-endif #TARGET_KERNEL_BUILT_FROM_SOURC
-
 ## Keylayouts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayouts/Generic.kl:system/usr/keylayout/Generic.kl \
