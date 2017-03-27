@@ -155,3 +155,4 @@ USE_CLANG_PLATFORM_BUILD := true
 # Don't dex preopt prebuilt apps that will be updated from Play Store
 DONT_DEXPREOPT_PREBUILTS := true
 
+-include device/asus/fugu/BoardConfigLineage.mk
