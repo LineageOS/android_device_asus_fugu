@@ -91,7 +91,7 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 # Enable ARM codegen for x86 with Houdini
 BUILD_ARM_FOR_X86 := true
 
-## Kernel
+# Kernel
 BOARD_KERNEL_CMDLINE := pci=noearly vmalloc=256M ptrace.ptrace_can_access=1
 BOARD_KERNEL_CMDLINE += earlyprintk=nologger loglevel=8
 BOARD_KERNEL_CMDLINE += androidboot.hardware=fugu androidboot.serialno=01234567890123456789
