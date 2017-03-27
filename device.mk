@@ -356,3 +356,5 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.intel.isv.vpp=1 \
     persist.intel.isv.frc=1
+
+$(call inherit-product, device/asus/fugu/device-lineage.mk)
