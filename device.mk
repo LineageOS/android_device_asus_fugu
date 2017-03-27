@@ -58,10 +58,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
-# Boot Animation
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bootanimation-580-256col.zip:system/media/bootanimation.zip
-
 ## Characteristics
 PRODUCT_CHARACTERISTICS := nosdcard,tv
 

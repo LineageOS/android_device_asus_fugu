@@ -16,8 +16,10 @@
 
 PRODUCT_MAKEFILES := \
      $(LOCAL_DIR)/aosp_fugu.mk \
-     $(LOCAL_DIR)/full_fugu.mk
+     $(LOCAL_DIR)/full_fugu.mk \
+     $(LOCAL_DIR)/lineage_fugu.mk
 
 COMMON_LUNCH_CHOICES := \
+     aosp_fugu-userdebug \
      full_fugu-userdebug \
-     aosp_fugu-userdebug
+     lineage_fugu-userdebug
