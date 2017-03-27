@@ -332,3 +332,5 @@ $(call add-product-dex-preopt-module-config,$(FUGU_DONT_DEXPREOPT_MODULES),disab
 # shipped on device was.
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=21
+
+$(call inherit-product, device/asus/fugu/device-lineage.mk)
