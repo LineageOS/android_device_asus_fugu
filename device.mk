@@ -136,7 +136,7 @@ PRODUCT_PACKAGES += \
     IMG_graphics \
     hwcomposer.moorefield
 
-#Video
+# Video
 PRODUCT_COPY_FILES += \
     device/asus/fugu/media_profiles.xml:system/etc/media_profiles.xml \
     device/asus/fugu/wrs_omxil_components.list:system/etc/wrs_omxil_components.list \
@@ -149,6 +149,9 @@ PRODUCT_COPY_FILES += \
     device/asus/fugu/video_isv_profile.xml:system/etc/video_isv_profile.xml \
     device/asus/fugu/codec_resources_limitation.xml:system/etc/codec_resources_limitation.xml
 
+# Default OMX service to non-Treble
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.media.treble_omx=false
 
 # psb video
 PRODUCT_PACKAGES += \
