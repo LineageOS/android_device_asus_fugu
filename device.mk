@@ -16,7 +16,7 @@
 #
 
 # Inherit proprietary-files
-$(call inherit-product-if-exists, vendor/asus/fugu/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/asus/fugu/fugu-vendor.mk)
 $(call inherit-product-if-exists, vendor/intel/PRIVATE/fugu/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/intel/moorefield/prebuilts/houdini/houdini.mk)
 
