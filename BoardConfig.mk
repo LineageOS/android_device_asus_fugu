@@ -21,6 +21,15 @@ TARGET_ARCH := x86
 TARGET_ARCH_VARIANT := silvermont
 TARGET_CPU_ABI := x86
 
+TARGET_2ND_ARCH := arm
+TARGET_2ND_CPU_ABI := armeabi-v7a
+TARGET_2ND_CPU_ABI2 := armeabi
+TARGET_2ND_ARCH_VARIANT := armv7-a-neon
+TARGET_2ND_CPU_VARIANT := generic
+
+TARGET_TRANSLATE_2ND_ARCH := true
+BUILD_ARM_FOR_X86 := true
+
 TARGET_RECOVERY_FSTAB := device/asus/fugu/recovery.fstab
 TARGET_RELEASETOOLS_EXTENSIONS := device/asus/fugu
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_fugu
