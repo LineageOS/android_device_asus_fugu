@@ -137,10 +137,6 @@ PRODUCT_PACKAGES += \
     IMG_graphics \
     hwcomposer.moorefield
 
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@2.0-impl \
-    android.hardware.graphics.mapper@2.0-impl
-
 # Video
 PRODUCT_COPY_FILES += \
     device/asus/fugu/media_profiles.xml:system/etc/media_profiles.xml \
@@ -341,10 +337,6 @@ PRODUCT_COPY_FILES += \
 # Wifi country code
 PRODUCT_COPY_FILES += \
     device/asus/fugu/init.fugu.countrycode.sh:system/bin/init.fugu.countrycode.sh
-
-# Vendor Interface Manifest
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
 
 # Some CTS tests will be skipped based on what the initial API level that
 # shipped on device was.
