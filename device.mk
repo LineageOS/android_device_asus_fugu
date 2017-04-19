@@ -342,10 +342,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/asus/fugu/init.fugu.countrycode.sh:system/bin/init.fugu.countrycode.sh
 
-# Vendor Interface Manifest
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
-
 # Some CTS tests will be skipped based on what the initial API level that
 # shipped on device was.
 PRODUCT_PROPERTY_OVERRIDES += \
