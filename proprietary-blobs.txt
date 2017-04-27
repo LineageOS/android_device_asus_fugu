@@ -45,7 +45,6 @@
 /system/lib/arm/libandroid.so
 /system/lib/arm/libart.so
 /system/lib/arm/libaudioflinger.so
-/system/lib/arm/libaudioresampler.so
 /system/lib/arm/libaudiospdif.so
 /system/lib/arm/libaudioutils.so
 /system/lib/arm/libbacktrace.so
@@ -133,7 +132,6 @@
 /system/lib/arm/libspeexresampler.so
 /system/lib/arm/libsqlite.so
 /system/lib/arm/libssl.so
-/system/lib/arm/libstagefright_avc_common.so
 /system/lib/arm/libstagefright_enc_common.so
 /system/lib/arm/libstagefright_foundation.so
 /system/lib/arm/libstagefright_http_support.so
@@ -220,20 +218,16 @@
 /system/vendor/firmware/BCM4350C0.hcd
 /system/vendor/firmware/BCM4350C0_SR2.hcd
 /system/vendor/firmware/PR-ModelCert
-/system/vendor/firmware/rgx.fw.signed
+/system/vendor/firmware/rgx.fw.signed.1.72.4.12
 /system/vendor/lib/egl/libEGL_POWERVR_ROGUE.so
 /system/vendor/lib/egl/libGLESv1_CM_POWERVR_ROGUE.so
 /system/vendor/lib/egl/libGLESv2_POWERVR_ROGUE.so
 /system/vendor/lib/hw/gralloc.moorefield.so
 /system/vendor/lib/hw/memtrack.moorefield.so
 /system/vendor/lib/hw/vulkan.moorefield.so
-/system/vendor/lib/libclangIMG.so
-/system/vendor/lib/libcptcompiler.so
 /system/vendor/lib/libglslcompiler.so
 /system/vendor/lib/libIMGegl.so
-/system/vendor/lib/libLLVMIMG.so
 /system/vendor/lib/liboemcrypto.so
-/system/vendor/lib/libpvrANDROID_WSEGL.so
 /system/vendor/lib/libpvrcpt.so
 /system/vendor/lib/libPVRRS.sha1.so
 /system/vendor/lib/libPVRRS.so

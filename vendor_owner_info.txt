@@ -29,7 +29,6 @@ system/lib/arm/libandroid_runtime.so:intel
 system/lib/arm/libandroid.so:intel
 system/lib/arm/libart.so:intel
 system/lib/arm/libaudioflinger.so:intel
-system/lib/arm/libaudioresampler.so:intel
 system/lib/arm/libaudiospdif.so:intel
 system/lib/arm/libaudioutils.so:intel
 system/lib/arm/libbacktrace.so:intel
@@ -116,7 +115,6 @@ system/lib/arm/libsoundtrigger.so:intel
 system/lib/arm/libspeexresampler.so:intel
 system/lib/arm/libsqlite.so:intel
 system/lib/arm/libssl.so:intel
-system/lib/arm/libstagefright_avc_common.so:intel
 system/lib/arm/libstagefright_enc_common.so:intel
 system/lib/arm/libstagefright_foundation.so:intel
 system/lib/arm/libstagefright_http_support.so:intel
@@ -203,19 +201,15 @@ system/vendor/bin/rscompiler:intel
 system/vendor/firmware/BCM4350C0.hcd:broadcom
 system/vendor/firmware/BCM4350C0_SR2.hcd:broadcom
 system/vendor/firmware/PR-ModelCert:intel
-system/vendor/firmware/rgx.fw.signed:intel
+system/vendor/firmware/rgx.fw.signed.1.72.4.12:intel
 system/vendor/lib/egl/libEGL_POWERVR_ROGUE.so:intel
 system/vendor/lib/egl/libGLESv1_CM_POWERVR_ROGUE.so:intel
 system/vendor/lib/egl/libGLESv2_POWERVR_ROGUE.so:intel
 system/vendor/lib/hw/gralloc.moorefield.so:intel
 system/vendor/lib/hw/memtrack.moorefield.so:intel
 system/vendor/lib/hw/vulkan.moorefield.so:intel
-system/vendor/lib/libclangIMG.so:intel
-system/vendor/lib/libcptcompiler.so:intel
 system/vendor/lib/libglslcompiler.so:intel
 system/vendor/lib/libIMGegl.so:intel
-system/vendor/lib/libLLVMIMG.so:intel
-system/vendor/lib/libpvrANDROID_WSEGL.so:intel
 system/vendor/lib/libpvrcpt.so:intel
 system/vendor/lib/libPVRRS.sha1.so:intel
 system/vendor/lib/libPVRRS.so:intel

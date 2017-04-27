@@ -40,7 +40,6 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/libandroid.so:system/lib/arm/libandroid.so:intel \
     vendor/intel/fugu/proprietary/libart.so:system/lib/arm/libart.so:intel \
     vendor/intel/fugu/proprietary/libaudioflinger.so:system/lib/arm/libaudioflinger.so:intel \
-    vendor/intel/fugu/proprietary/libaudioresampler.so:system/lib/arm/libaudioresampler.so:intel \
     vendor/intel/fugu/proprietary/libaudiospdif.so:system/lib/arm/libaudiospdif.so:intel \
     vendor/intel/fugu/proprietary/libaudioutils.so:system/lib/arm/libaudioutils.so:intel \
     vendor/intel/fugu/proprietary/libbacktrace.so:system/lib/arm/libbacktrace.so:intel \
@@ -126,7 +125,6 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/libspeexresampler.so:system/lib/arm/libspeexresampler.so:intel \
     vendor/intel/fugu/proprietary/libsqlite.so:system/lib/arm/libsqlite.so:intel \
     vendor/intel/fugu/proprietary/libssl.so:system/lib/arm/libssl.so:intel \
-    vendor/intel/fugu/proprietary/libstagefright_avc_common.so:system/lib/arm/libstagefright_avc_common.so:intel \
     vendor/intel/fugu/proprietary/libstagefright_enc_common.so:system/lib/arm/libstagefright_enc_common.so:intel \
     vendor/intel/fugu/proprietary/libstagefright_foundation.so:system/lib/arm/libstagefright_foundation.so:intel \
     vendor/intel/fugu/proprietary/libstagefright_http_support.so:system/lib/arm/libstagefright_http_support.so:intel \
@@ -207,19 +205,15 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/pvrtld:system/vendor/bin/pvrtld:intel \
     vendor/intel/fugu/proprietary/rscompiler:system/vendor/bin/rscompiler:intel \
     vendor/intel/fugu/proprietary/PR-ModelCert:system/vendor/firmware/PR-ModelCert:intel \
-    vendor/intel/fugu/proprietary/rgx.fw.signed:system/vendor/firmware/rgx.fw.signed:intel \
+    vendor/intel/fugu/proprietary/rgx.fw.signed.1.72.4.12:system/vendor/firmware/rgx.fw.signed.1.72.4.12:intel \
     vendor/intel/fugu/proprietary/libEGL_POWERVR_ROGUE.so:system/vendor/lib/egl/libEGL_POWERVR_ROGUE.so:intel \
     vendor/intel/fugu/proprietary/libGLESv1_CM_POWERVR_ROGUE.so:system/vendor/lib/egl/libGLESv1_CM_POWERVR_ROGUE.so:intel \
     vendor/intel/fugu/proprietary/libGLESv2_POWERVR_ROGUE.so:system/vendor/lib/egl/libGLESv2_POWERVR_ROGUE.so:intel \
     vendor/intel/fugu/proprietary/gralloc.moorefield.so:system/vendor/lib/hw/gralloc.moorefield.so:intel \
     vendor/intel/fugu/proprietary/memtrack.moorefield.so:system/vendor/lib/hw/memtrack.moorefield.so:intel \
     vendor/intel/fugu/proprietary/vulkan.moorefield.so:system/vendor/lib/hw/vulkan.moorefield.so:intel \
-    vendor/intel/fugu/proprietary/libclangIMG.so:system/vendor/lib/libclangIMG.so:intel \
-    vendor/intel/fugu/proprietary/libcptcompiler.so:system/vendor/lib/libcptcompiler.so:intel \
     vendor/intel/fugu/proprietary/libglslcompiler.so:system/vendor/lib/libglslcompiler.so:intel \
     vendor/intel/fugu/proprietary/libIMGegl.so:system/vendor/lib/libIMGegl.so:intel \
-    vendor/intel/fugu/proprietary/libLLVMIMG.so:system/vendor/lib/libLLVMIMG.so:intel \
-    vendor/intel/fugu/proprietary/libpvrANDROID_WSEGL.so:system/vendor/lib/libpvrANDROID_WSEGL.so:intel \
     vendor/intel/fugu/proprietary/libpvrcpt.so:system/vendor/lib/libpvrcpt.so:intel \
     vendor/intel/fugu/proprietary/libPVRRS.sha1.so:system/vendor/lib/libPVRRS.sha1.so:intel \
     vendor/intel/fugu/proprietary/libPVRRS.so:system/vendor/lib/libPVRRS.so:intel \
