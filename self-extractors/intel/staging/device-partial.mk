@@ -43,14 +43,14 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/libaudiospdif.so:system/lib/arm/libaudiospdif.so:intel \
     vendor/intel/fugu/proprietary/libaudioutils.so:system/lib/arm/libaudioutils.so:intel \
     vendor/intel/fugu/proprietary/libbacktrace.so:system/lib/arm/libbacktrace.so:intel \
-    vendor/intel/fugu/proprietary/libbcc.so:system/lib/arm/libbcc.so:intel \
+    vendor/intel/fugu/proprietary/libbcc.so:system/lib/libbcc.so:intel \
     vendor/intel/fugu/proprietary/libbcinfo.so:system/lib/arm/libbcinfo.so:intel \
     vendor/intel/fugu/proprietary/libbinder.so:system/lib/arm/libbinder.so:intel \
     vendor/intel/fugu/proprietary/libblas.so:system/lib/arm/libblas.so:intel \
     vendor/intel/fugu/proprietary/libcamera2ndk.so:system/lib/arm/libcamera2ndk.so:intel \
     vendor/intel/fugu/proprietary/libcamera_client.so:system/lib/arm/libcamera_client.so:intel \
     vendor/intel/fugu/proprietary/libcamera_metadata.so:system/lib/arm/libcamera_metadata.so:intel \
-    vendor/intel/fugu/proprietary/libcommon_time_client.so:system/lib/arm/libcommon_time_client.so:intel \
+    vendor/intel/fugu/proprietary/libcommon_time_client.so:system/lib/libcommon_time_client.so:intel \
     vendor/intel/fugu/proprietary/libcompiler_rt.so:system/lib/arm/libcompiler_rt.so:intel \
     vendor/intel/fugu/proprietary/libcrypto.so:system/lib/arm/libcrypto.so:intel \
     vendor/intel/fugu/proprietary/libc.so:system/lib/arm/libc.so:intel \
@@ -58,13 +58,13 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/libcutils.so:system/lib/arm/libcutils.so:intel \
     vendor/intel/fugu/proprietary/libdl.so:system/lib/arm/libdl.so:intel \
     vendor/intel/fugu/proprietary/libdng_sdk.so:system/lib/arm/libdng_sdk.so:intel \
-    vendor/intel/fugu/proprietary/libeffects.so:system/lib/arm/libeffects.so:intel \
+    vendor/intel/fugu/proprietary/libeffects.so:system/vendor/lib/libeffects.so:intel \
     vendor/intel/fugu/proprietary/libEGL.so:system/lib/arm/libEGL.so:intel \
     vendor/intel/fugu/proprietary/libETC1.so:system/lib/arm/libETC1.so:intel \
     vendor/intel/fugu/proprietary/libexpat.so:system/lib/arm/libexpat.so:intel \
-    vendor/intel/fugu/proprietary/libFFTEm.so:system/lib/arm/libFFTEm.so:intel \
-    vendor/intel/fugu/proprietary/libfilterfw.so:system/lib/arm/libfilterfw.so:intel \
-    vendor/intel/fugu/proprietary/libfilterpack_imageproc.so:system/lib/arm/libfilterpack_imageproc.so:intel \
+    vendor/intel/fugu/proprietary/libFFTEm.so:system/lib/libFFTEm.so:intel \
+    vendor/intel/fugu/proprietary/libfilterfw.so:system/lib/libfilterfw.so:intel \
+    vendor/intel/fugu/proprietary/libfilterpack_imageproc.so:system/lib/libfilterpack_imageproc.so:intel \
     vendor/intel/fugu/proprietary/libft2.so:system/lib/arm/libft2.so:intel \
     vendor/intel/fugu/proprietary/libGLESv1_CM.so:system/lib/arm/libGLESv1_CM.so:intel \
     vendor/intel/fugu/proprietary/libGLESv2.so:system/lib/arm/libGLESv2.so:intel \
@@ -76,11 +76,11 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/libicui18n.so:system/lib/arm/libicui18n.so:intel \
     vendor/intel/fugu/proprietary/libicuuc.so:system/lib/arm/libicuuc.so:intel \
     vendor/intel/fugu/proprietary/libimg_utils.so:system/lib/arm/libimg_utils.so:intel \
-    vendor/intel/fugu/proprietary/libinputflinger.so:system/lib/arm/libinputflinger.so:intel \
+    vendor/intel/fugu/proprietary/libinputflinger.so:system/lib/libinputflinger.so:intel \
     vendor/intel/fugu/proprietary/libinput.so:system/lib/arm/libinput.so:intel \
     vendor/intel/fugu/proprietary/libjnigraphics.so:system/lib/arm/libjnigraphics.so:intel \
     vendor/intel/fugu/proprietary/libjpeg.so:system/lib/arm/libjpeg.so:intel \
-    vendor/intel/fugu/proprietary/libLLVM.so:system/lib/arm/libLLVM.so:intel \
+    vendor/intel/fugu/proprietary/libLLVM.so:system/lib/libLLVM.so:intel \
     vendor/intel/fugu/proprietary/liblog.so:system/lib/arm/liblog.so:intel \
     vendor/intel/fugu/proprietary/liblz4.so:system/lib/arm/liblz4.so:intel \
     vendor/intel/fugu/proprietary/liblzma.so:system/lib/arm/liblzma.so:intel \
@@ -96,11 +96,11 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/libnativeloader.so:system/lib/arm/libnativeloader.so:intel \
     vendor/intel/fugu/proprietary/libnbaio.so:system/lib/arm/libnbaio.so:intel \
     vendor/intel/fugu/proprietary/libnetd_client.so:system/lib/arm/libnetd_client.so:intel \
-    vendor/intel/fugu/proprietary/libnetutils.so:system/lib/arm/libnetutils.so:intel \
-    vendor/intel/fugu/proprietary/libnl.so:system/lib/arm/libnl.so:intel \
+    vendor/intel/fugu/proprietary/libnetutils.so:system/lib/libnetutils.so:intel \
+    vendor/intel/fugu/proprietary/libnl.so:system/lib/libnl.so:intel \
     vendor/intel/fugu/proprietary/libOpenMAXAL.so:system/lib/arm/libOpenMAXAL.so:intel \
     vendor/intel/fugu/proprietary/libOpenSLES.so:system/lib/arm/libOpenSLES.so:intel \
-    vendor/intel/fugu/proprietary/libopus.so:system/lib/arm/libopus.so:intel \
+    vendor/intel/fugu/proprietary/libopus.so:system/lib/libopus.so:intel \
     vendor/intel/fugu/proprietary/libpackagelistparser.so:system/lib/arm/libpackagelistparser.so:intel \
     vendor/intel/fugu/proprietary/libpdfium.so:system/lib/arm/libpdfium.so:intel \
     vendor/intel/fugu/proprietary/libpiex.so:system/lib/arm/libpiex.so:intel \
@@ -125,7 +125,7 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/libspeexresampler.so:system/lib/arm/libspeexresampler.so:intel \
     vendor/intel/fugu/proprietary/libsqlite.so:system/lib/arm/libsqlite.so:intel \
     vendor/intel/fugu/proprietary/libssl.so:system/lib/arm/libssl.so:intel \
-    vendor/intel/fugu/proprietary/libstagefright_enc_common.so:system/lib/arm/libstagefright_enc_common.so:intel \
+    vendor/intel/fugu/proprietary/libstagefright_enc_common.so:system/lib/libstagefright_enc_common.so:intel \
     vendor/intel/fugu/proprietary/libstagefright_foundation.so:system/lib/arm/libstagefright_foundation.so:intel \
     vendor/intel/fugu/proprietary/libstagefright_http_support.so:system/lib/arm/libstagefright_http_support.so:intel \
     vendor/intel/fugu/proprietary/libstagefright_omx.so:system/lib/arm/libstagefright_omx.so:intel \
@@ -133,14 +133,14 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/libstdc++.so:system/lib/arm/libstdc++.so:intel \
     vendor/intel/fugu/proprietary/libsurfaceflinger.so:system/lib/arm/libsurfaceflinger.so:intel \
     vendor/intel/fugu/proprietary/libsync.so:system/lib/arm/libsync.so:intel \
-    vendor/intel/fugu/proprietary/libsysutils.so:system/lib/arm/libsysutils.so:intel \
+    vendor/intel/fugu/proprietary/libsysutils.so:system/lib/libsysutils.so:intel \
     vendor/intel/fugu/proprietary/libui.so:system/lib/arm/libui.so:intel \
     vendor/intel/fugu/proprietary/libunwind.so:system/lib/arm/libunwind.so:intel \
     vendor/intel/fugu/proprietary/libusbhost.so:system/lib/arm/libusbhost.so:intel \
     vendor/intel/fugu/proprietary/libutils.so:system/lib/arm/libutils.so:intel \
     vendor/intel/fugu/proprietary/libvorbisidec.so:system/lib/arm/libvorbisidec.so:intel \
     vendor/intel/fugu/proprietary/libvulkan.so:system/lib/arm/libvulkan.so:intel \
-    vendor/intel/fugu/proprietary/libwebrtc_audio_coding.so:system/lib/arm/libwebrtc_audio_coding.so:intel \
+    vendor/intel/fugu/proprietary/libwebrtc_audio_preprocessing.so:system/lib/libwebrtc_audio_preprocessing.so:intel \
     vendor/intel/fugu/proprietary/libwebviewchromium_plat_support.so:system/lib/arm/libwebviewchromium_plat_support.so:intel \
     vendor/intel/fugu/proprietary/libwilhelm.so:system/lib/arm/libwilhelm.so:intel \
     vendor/intel/fugu/proprietary/libz.so:system/lib/arm/libz.so:intel \
