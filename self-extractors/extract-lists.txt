@@ -54,14 +54,14 @@
             system/lib/arm/libaudiospdif.so \
             system/lib/arm/libaudioutils.so \
             system/lib/arm/libbacktrace.so \
-            system/lib/arm/libbcc.so \
+            system/lib/libbcc.so \
             system/lib/arm/libbcinfo.so \
             system/lib/arm/libbinder.so \
             system/lib/arm/libblas.so \
             system/lib/arm/libcamera2ndk.so \
             system/lib/arm/libcamera_client.so \
             system/lib/arm/libcamera_metadata.so \
-            system/lib/arm/libcommon_time_client.so \
+            system/lib/libcommon_time_client.so \
             system/lib/arm/libcompiler_rt.so \
             system/lib/arm/libcrypto.so \
             system/lib/arm/libc.so \
@@ -69,13 +69,13 @@
             system/lib/arm/libcutils.so \
             system/lib/arm/libdl.so \
             system/lib/arm/libdng_sdk.so \
-            system/lib/arm/libeffects.so \
+            system/vendor/lib/libeffects.so \
             system/lib/arm/libEGL.so \
             system/lib/arm/libETC1.so \
             system/lib/arm/libexpat.so \
-            system/lib/arm/libFFTEm.so \
-            system/lib/arm/libfilterfw.so \
-            system/lib/arm/libfilterpack_imageproc.so \
+            system/lib/libFFTEm.so \
+            system/lib/libfilterfw.so \
+            system/lib/libfilterpack_imageproc.so \
             system/lib/arm/libft2.so \
             system/lib/arm/libGLESv1_CM.so \
             system/lib/arm/libGLESv2.so \
@@ -87,11 +87,11 @@
             system/lib/arm/libicui18n.so \
             system/lib/arm/libicuuc.so \
             system/lib/arm/libimg_utils.so \
-            system/lib/arm/libinputflinger.so \
+            system/lib/libinputflinger.so \
             system/lib/arm/libinput.so \
             system/lib/arm/libjnigraphics.so \
             system/lib/arm/libjpeg.so \
-            system/lib/arm/libLLVM.so \
+            system/lib/libLLVM.so \
             system/lib/arm/liblog.so \
             system/lib/arm/liblz4.so \
             system/lib/arm/liblzma.so \
@@ -107,11 +107,11 @@
             system/lib/arm/libnativeloader.so \
             system/lib/arm/libnbaio.so \
             system/lib/arm/libnetd_client.so \
-            system/lib/arm/libnetutils.so \
-            system/lib/arm/libnl.so \
+            system/lib/libnetutils.so \
+            system/lib/libnl.so \
             system/lib/arm/libOpenMAXAL.so \
             system/lib/arm/libOpenSLES.so \
-            system/lib/arm/libopus.so \
+            system/lib/libopus.so \
             system/lib/arm/libpackagelistparser.so \
             system/lib/arm/libpdfium.so \
             system/lib/arm/libpiex.so \
@@ -136,7 +136,7 @@
             system/lib/arm/libspeexresampler.so \
             system/lib/arm/libsqlite.so \
             system/lib/arm/libssl.so \
-            system/lib/arm/libstagefright_enc_common.so \
+            system/lib/libstagefright_enc_common.so \
             system/lib/arm/libstagefright_foundation.so \
             system/lib/arm/libstagefright_http_support.so \
             system/lib/arm/libstagefright_omx.so \
@@ -144,14 +144,14 @@
             system/lib/arm/libstdc++.so \
             system/lib/arm/libsurfaceflinger.so \
             system/lib/arm/libsync.so \
-            system/lib/arm/libsysutils.so \
+            system/lib/libsysutils.so \
             system/lib/arm/libui.so \
             system/lib/arm/libunwind.so \
             system/lib/arm/libusbhost.so \
             system/lib/arm/libutils.so \
             system/lib/arm/libvorbisidec.so \
             system/lib/arm/libvulkan.so \
-            system/lib/arm/libwebrtc_audio_coding.so \
+            system/lib/libwebrtc_audio_preprocessing.so \
             system/lib/arm/libwebviewchromium_plat_support.so \
             system/lib/arm/libwilhelm.so \
             system/lib/arm/libz.so \
