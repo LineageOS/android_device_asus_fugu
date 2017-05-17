@@ -81,9 +81,7 @@ HWUI_IMG_FBO_CACHE_OPTIM := true
 TARGET_SUPPORT_HDMI_PRIMARY := true
 BOARD_USES_LIBDRM := true
 
-# Use SurfaceFlinger HWC 2On1 Adaptor
 TARGET_USES_HWC2 := true
-TARGET_USES_HWC2ON1ADAPTER := true
 SF_START_GRAPHICS_ALLOCATOR_SERVICE := true
 VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 6000000
@@ -150,3 +148,4 @@ DONT_DEXPREOPT_PREBUILTS := true
 
 # Vendor Interface Manifest
 DEVICE_MANIFEST_FILE := device/asus/fugu/manifest.xml
+DEVICE_MATRIX_FILE := device/asus/fugu/compatibility_matrix.xml
