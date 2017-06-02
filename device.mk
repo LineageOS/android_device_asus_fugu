@@ -142,6 +142,10 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.mapper@2.0-impl
 
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
 # Video
 PRODUCT_COPY_FILES += \
     device/asus/fugu/media_profiles.xml:system/etc/media_profiles.xml \
