@@ -76,7 +76,7 @@ status_t AudioHardwareInput::getMicMute(bool* mute)
 }
 
 // milliseconds per ALSA period
-const uint32_t AudioHardwareInput::kPeriodMsec = 10;
+const uint32_t AudioHardwareInput::kPeriodMsec = 20;
 
 size_t AudioHardwareInput::calculateInputBufferSize(uint32_t outputSampleRate,
                                                     audio_format_t format,
