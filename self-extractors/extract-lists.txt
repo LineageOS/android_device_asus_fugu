@@ -121,7 +121,6 @@
             system/lib/arm/libprocessgroup.so \
             system/lib/arm/libprotobuf-cpp-lite.so \
             system/lib/arm/libradio_metadata.so \
-            system/lib/arm/libradio.so \
             system/lib/arm/libRScpp.so \
             system/lib/arm/libRSCpuRef.so \
             system/lib/arm/libRSDriver.so \
