@@ -129,7 +129,8 @@ audio_devices_t ATVAudioPolicyManager::getDeviceForInputSource(audio_source_t in
     const audio_devices_t availableDeviceTypes = mAvailableInputDevices.types() &
             ~AUDIO_DEVICE_BIT_IN;
 
-    if (inputSource == AUDIO_SOURCE_VOICE_RECOGNITION) {
+    if (inputSource == AUDIO_SOURCE_VOICE_RECOGNITION ||
+            inputSource == AUDIO_SOURCE_UNPROCESSED) {
 #ifdef REMOTE_CONTROL_INTERFACE
       ALOGI("Using REMOTE_CONTROL_INTERFACE.");
       // Check if remote is actually connected or we should move on
