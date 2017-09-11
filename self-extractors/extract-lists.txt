@@ -150,7 +150,7 @@
             system/lib/arm/libutils.so \
             system/lib/arm/libvorbisidec.so \
             system/lib/arm/libvulkan.so \
-            system/lib/libwebrtc_audio_preprocessing.so \
+            system/vendor/lib/libwebrtc_audio_preprocessing.so \
             system/lib/arm/libwebviewchromium_plat_support.so \
             system/lib/arm/libwilhelm.so \
             system/lib/arm/libz.so \
