@@ -139,7 +139,7 @@ PRODUCT_COPY_FILES := \
     vendor/intel/fugu/proprietary/libutils.so:system/lib/arm/libutils.so:intel \
     vendor/intel/fugu/proprietary/libvorbisidec.so:system/lib/arm/libvorbisidec.so:intel \
     vendor/intel/fugu/proprietary/libvulkan.so:system/lib/arm/libvulkan.so:intel \
-    vendor/intel/fugu/proprietary/libwebrtc_audio_preprocessing.so:system/lib/libwebrtc_audio_preprocessing.so:intel \
+    vendor/intel/fugu/proprietary/libwebrtc_audio_preprocessing.so:system/vendor/lib/libwebrtc_audio_preprocessing.so:intel \
     vendor/intel/fugu/proprietary/libwebviewchromium_plat_support.so:system/lib/arm/libwebviewchromium_plat_support.so:intel \
     vendor/intel/fugu/proprietary/libwilhelm.so:system/lib/arm/libwilhelm.so:intel \
     vendor/intel/fugu/proprietary/libz.so:system/lib/arm/libz.so:intel \
