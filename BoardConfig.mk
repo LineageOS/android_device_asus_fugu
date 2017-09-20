@@ -141,6 +141,9 @@ BOARD_SEPOLICY_DIRS += device/asus/fugu/sepolicy
 # Don't dex preopt prebuilt apps that will be updated from Play Store
 DONT_DEXPREOPT_PREBUILTS := true
 
+# Don't uncompress dex files in priv apps APKs to save on space.
+DONT_UNCOMPRESS_PRIV_APPS_DEXS := true
+
 # Vendor Interface Manifest
 DEVICE_MANIFEST_FILE := device/asus/fugu/manifest.xml
 DEVICE_MATRIX_FILE := device/asus/fugu/compatibility_matrix.xml
