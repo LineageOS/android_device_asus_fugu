@@ -19,4 +19,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=google/fugu/fugu:7.1.2/N2G47H/3783593:user/release-keys \
     PRIVATE_BUILD_DESC="fugu-user 7.1.2 N2G47H 3783593 release-keys"
 
-$(call inherit-product-if-exists, vendor/google/marlin/marlin-vendor.mk)
+$(call inherit-product, vendor/asus/fugu/fugu-vendor.mk)
