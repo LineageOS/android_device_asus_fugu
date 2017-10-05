@@ -263,7 +263,7 @@ ifneq (,$(filter userdebug, $(TARGET_BUILD_VARIANT)))
     $(call add-product-dex-preopt-module-config,wifi-service,--generate-mini-debug-info)
 endif
 
-$(call inherit-product-if-exists, vendor/asus/fugu/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/asus/fugu/fugu-vendor.mk)
 $(call inherit-product-if-exists, vendor/intel/PRIVATE/fugu/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/intel/moorefield/prebuilts/houdini/houdini.mk)
 
