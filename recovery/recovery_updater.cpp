@@ -30,8 +30,9 @@
 #include <string>
 #include <vector>
 
+#include <edify/expr.h>
+
 #include "fw_version_check.h"
-#include "edify/expr.h"
 
 #define FORCE_RW_OPT            "0"
 #define BOOT_IFWI_SIZE          0x400000
