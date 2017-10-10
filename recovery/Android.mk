@@ -6,7 +6,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := librecovery_updater_fugu
 LOCAL_SRC_FILES := recovery_updater.cpp fw_version_check.cpp
-LOCAL_C_INCLUDES += bootable/recovery
+LOCAL_STATIC_LIBRARIES := libedify
 
 include $(BUILD_STATIC_LIBRARY)
 
