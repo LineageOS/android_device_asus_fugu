@@ -3,3 +3,9 @@ allow mediacodec surfaceflinger:fifo_file { read write };
 
 # b/33344694
 allow mediacodec tee_device:chr_file r_file_perms;
+
+# Mediacodec needs to access an xml file from an app. This is not forbidden
+# on non-Treble devices. Fixes:
+# ISVProfile: getGlobalStatus: failed to open file
+# /data/user/0/com.intel.vpp/shared_prefs/vpp_settings.xml
+allow mediacodec system_data_file:lnk_file r_file_perms;
