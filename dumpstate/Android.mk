@@ -22,6 +22,10 @@ LOCAL_SRC_FILES := \
     DumpstateDevice.cpp \
     service.cpp
 
+LOCAL_CFLAGS := -Wall -Werror
+# 'pad64' is unused in DumpstateDevice.cpp
+LOCAL_CFLAGS += -Wno-unused-const-variable
+
 LOCAL_SHARED_LIBRARIES := \
     android.hardware.dumpstate@1.0 \
     libbase \
