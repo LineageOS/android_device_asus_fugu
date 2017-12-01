@@ -90,6 +90,9 @@ PRODUCT_PROPERTY_OVERRIDES += ro.hdmi.set_menu_language=false
 PRODUCT_PROPERTY_OVERRIDES += media.stagefright.less-secure=true
 
 # Boot Animation
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
+
 PRODUCT_COPY_FILES += \
     device/asus/fugu/bootanimation-580-256col.zip:system/media/bootanimation.zip
 
