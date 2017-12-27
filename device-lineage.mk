@@ -1,3 +1,3 @@
-PRODUCT_PACKAGES +=
+PRODUCT_PACKAGES += \
     AppDrawer \
     LeanbackCustomize
