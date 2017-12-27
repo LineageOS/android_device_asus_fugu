@@ -15,5 +15,9 @@
 #
 $(call inherit-product, device/asus/fugu/full_fugu.mk)
 
+# AppWidget permission needed to prevent a Launcher crash.
+PRODUCT_COPY_FILES += \
+   frameworks/native/data/etc/android.software.app_widgets.xml:system/etc/permissions/android.software.app_widgets.xml
+
 PRODUCT_NAME := aosp_fugu
 
