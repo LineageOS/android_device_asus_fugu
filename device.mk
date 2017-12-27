@@ -85,7 +85,7 @@ PRODUCT_PACKAGES += \
 USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
-# specific management of audio_policy.conf
+# Specific management of audio_policy.conf
 PRODUCT_COPY_FILES += \
     device/asus/fugu/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
@@ -94,10 +94,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml
 
-# Hdmi CEC: Fugu works as a playback device (4).
+# HDMI CEC: Fugu works as a playback device (4).
 PRODUCT_PROPERTY_OVERRIDES += ro.hdmi.device_type=4
 
-# Hdmi CEC: Disable 'Set Menu Language' feature.
+# HDMI CEC: Disable 'Set Menu Language' feature.
 PRODUCT_PROPERTY_OVERRIDES += ro.hdmi.set_menu_language=false
 
 # Keep secure decoders in mediaserver process
@@ -162,7 +162,7 @@ PRODUCT_PACKAGES += \
     libgabi++-mfx \
     libstlport-mfx
 
-#video firmware
+# Video firmware
 PRODUCT_PACKAGES += \
     msvdx.bin.0008.0000.0000 \
     msvdx.bin.0008.0000.0001 \
@@ -179,6 +179,7 @@ PRODUCT_PACKAGES += \
     vsp.bin.0008.0000.0002 \
     vsp.bin.0008.0002.0001 \
     vsp.bin.000c.0001.0001
+
 # libva
 PRODUCT_PACKAGES += \
     libva \
@@ -186,7 +187,7 @@ PRODUCT_PACKAGES += \
     libva-tpi \
     vainfo
 
-#libstagefrighthw
+# libstagefrighthw
 PRODUCT_PACKAGES += \
     libstagefrighthw
 
@@ -218,7 +219,7 @@ PRODUCT_PACKAGES += \
     libOMXVideoEncoderMPEG4 \
     libOMXVideoEncoderVP8
 
-#libISV
+# libISV
 PRODUCT_PACKAGES += libisv_omx_core
 
 # pvr
@@ -312,7 +313,7 @@ $(call inherit-product-if-exists, vendor/intel/moorefield/prebuilts/houdini/houd
 # Add WiFi Firmware
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4354/device-bcm.mk)
 
-# specific management of sep_policy.conf
+# Specific management of sep_policy.conf
 PRODUCT_COPY_FILES += \
     device/asus/fugu/sep_policy.conf:system/etc/security/sep_policy.conf
 
