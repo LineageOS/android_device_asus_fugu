@@ -50,7 +50,7 @@ $(call inherit-product-if-exists, frameworks/native/build/tablet-10in-xhdpi-2048
 
 PRODUCT_CHARACTERISTICS := nosdcard,tv
 
-DEVICE_PACKAGE_OVERLAYS := \
+DEVICE_PACKAGE_OVERLAYS += \
     device/asus/fugu/overlay
 
 PRODUCT_COPY_FILES += \
