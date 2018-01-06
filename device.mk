@@ -108,9 +108,6 @@ ADDITIONAL_DEFAULT_PROPERTIES += ro.dalvik.vm.native.bridge=libhoudini.so
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-PRODUCT_COPY_FILES += \
-    device/asus/fugu/bootanimation-580-256col.zip:system/media/bootanimation.zip
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     bt_bcm4354
