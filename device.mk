@@ -228,6 +228,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sep/sep_policy.conf:system/etc/security/sep_policy.conf
 
+## Shipping API
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
+
 ## Stagefright
 PRODUCT_PACKAGES += \
     libstagefrighthw

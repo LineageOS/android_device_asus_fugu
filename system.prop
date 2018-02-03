@@ -36,11 +36,6 @@ media.stagefright.cache-params=10240/20480/15
 # Set service to non-Treble
 persist.media.treble_omx=false
 
-## Shipping API Level
-# Some CTS tests will be skipped based on what the initial API level that
-# shipped on device was.
-ro.product.first_api_level=21
-
 ## Stagefright
 # Keep secure decoders in mediaserver process
 media.stagefright.less-secure=true
