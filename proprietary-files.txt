@@ -68,7 +68,7 @@ lib/arm/libcutils.so
 lib/arm/libdl.so
 lib/arm/libdng_sdk.so
 lib/arm/libdrmframework.so
-vendor/lib/arm/libeffects.so
+vendor/lib/libeffects.so
 lib/arm/libEGL.so
 lib/arm/libETC1.so
 lib/arm/libexpat.so
@@ -150,7 +150,7 @@ lib/arm/libusbhost.so
 lib/arm/libutils.so
 lib/arm/libvorbisidec.so
 lib/arm/libvulkan.so
-vendor/lib/arm/libwebrtc_audio_preprocessing.so
+lib/arm/libwebrtc_audio_preprocessing.so
 lib/arm/libwebviewchromium_plat_support.so
 lib/arm/libwilhelm.so
 lib/arm/libz.so
