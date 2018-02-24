@@ -68,7 +68,7 @@ lib/arm/libcutils.so
 lib/arm/libdl.so
 lib/arm/libdng_sdk.so
 lib/arm/libdrmframework.so
-vendor/lib/arm/libeffects.so
+vendor/lib/libeffects.so
 lib/arm/libEGL.so
 lib/arm/libETC1.so
 lib/arm/libexpat.so
@@ -88,6 +88,8 @@ lib/arm/libicui18n.so
 lib/arm/libicuuc.so
 lib/arm/libimg_utils.so
 lib/libinputflinger.so
+lib/libinput.so
+lib/arm/libinput.so
 lib/arm/libjnigraphics.so
 lib/arm/libjpeg.so
 lib/libLLVM.so
@@ -150,7 +152,7 @@ lib/arm/libusbhost.so
 lib/arm/libutils.so
 lib/arm/libvorbisidec.so
 lib/arm/libvulkan.so
-vendor/lib/arm/libwebrtc_audio_preprocessing.so
+lib/arm/libwebrtc_audio_preprocessing.so
 lib/arm/libwebviewchromium_plat_support.so
 lib/arm/libwilhelm.so
 lib/arm/libz.so
@@ -215,8 +217,7 @@ lib/libsepdrm_cc54.so
 lib/libstlport-mfx.so
 lib/libgabi++-mfx.so
 -priv-app/AtvRemoteService/AtvRemoteService.apk
--priv-app/LeanbackLauncher.apk:priv-app/LeanbackLauncher/LeanbackLauncher.apk:PRESIGNED
--priv-app/TV/TV.apk:priv-app/TV/TV.apk:PRESIGNED
+-priv-app/TV/TV.apk;PRESIGNED
 vendor/bin/hwperfbin2jsont
 vendor/bin/pvrdebug
 vendor/bin/pvrhtb2txt
