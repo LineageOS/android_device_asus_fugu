@@ -23,30 +23,42 @@ VENDOR=asus
 
 INITIAL_COPYRIGHT_YEAR=2017
 
-# Load extract_utils and do some sanity checks
+# Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-CM_ROOT="$MY_DIR"/../../..
+LINEAGE_ROOT="$MY_DIR"/../../..
 
-HELPER="$CM_ROOT"/vendor/cm/build/tools/extract_utils.sh
+HELPER="$LINEAGE_ROOT"/vendor/lineage/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
 fi
 . "$HELPER"
 
-# Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
+# Write custom header
+function write_fugu_headers() {
+    write_header "$ANDROIDMK"
 
-# Copyright headers and guards
-write_headers
-
-write_makefiles "$MY_DIR"/proprietary-files.txt
-
-cat << EOF >> "$ANDROIDMK"
-
+    cat << EOF >> "$ANDROIDMK"
+LOCAL_PATH := \$(call my-dir)
+EOF
+    cat << EOF >> "$ANDROIDMK"
+ifneq (\$(filter fugu,\$(TARGET_DEVICE)),)
 EOF
 
-# Finish
+    write_header "$BOARDMK"
+    write_header "$PRODUCTMK"
+}
+
+# Initialize the helper
+setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
+
+# Copyright headers and guards
+write_fugu_headers
+
+# The standard blobs
+write_makefiles "$MY_DIR"/proprietary-files.txt
+
+# Done
 write_footers
