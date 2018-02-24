@@ -116,7 +116,7 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     dalvik.vm.implicit_checks=none
 
 # Set the prop to enable arm native bridge
-ADDITIONAL_DEFAULT_PROPERTIES += ro.dalvik.vm.native.bridge=libhoudini.so
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.dalvik.vm.native.bridge=libhoudini.so
 
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 1920
