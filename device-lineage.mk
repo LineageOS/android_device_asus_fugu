@@ -1,3 +1,4 @@
 PRODUCT_PACKAGES += \
     AppDrawer \
-    LeanbackCustomize
+    LeanbackCustomize  \
+    textclassifier.smartselection.bundle1
