@@ -1,2 +1,4 @@
+dontaudit untrusted_app_25 debugfs:file read;
+dontaudit untrusted_app_25 gpu_pid_stats_file:dir read;
 dontaudit untrusted_app_25 proc:file read;
 
