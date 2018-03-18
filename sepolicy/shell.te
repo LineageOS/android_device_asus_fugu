@@ -1,2 +1,0 @@
-dontaudit shell kernel:system syslog_read;
-
