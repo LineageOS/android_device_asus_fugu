@@ -245,7 +245,6 @@ vendor/lib/libdrmdecrypt.so
 vendor/lib/libeffects.so
 vendor/lib/libglslcompiler.so
 vendor/lib/libIMGegl.so
-vendor/lib/liboemcrypto.so
 vendor/lib/libpvrANDROID_WSEGL.so
 vendor/lib/libpvrcpt.so
 vendor/lib/libPVRRS.sha1.so
