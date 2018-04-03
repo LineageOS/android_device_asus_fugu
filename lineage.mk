@@ -16,8 +16,9 @@ PRODUCT_MANUFACTURER := Asus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=fugu \
-    BUILD_FINGERPRINT=google/fugu/fugu:8.0.0/OPR2.170623.027/4397545:user/release-keys \
     PRIVATE_BUILD_DESC="fugu-user 8.0.0 OPR2.170623.027 4397545 release-keys"
+
+BUILD_FINGERPRINT := google/fugu/fugu:8.0.0/OPR2.170623.027/4397545:user/release-keys
 
 $(call inherit-product, vendor/asus/fugu/fugu-vendor.mk)
 $(call inherit-product, vendor/google/atv/atv-common.mk)
