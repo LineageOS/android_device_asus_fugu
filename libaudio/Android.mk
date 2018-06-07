@@ -35,7 +35,6 @@ LOCAL_C_INCLUDES := \
     $(call include-path-for, audio-utils)
 
 LOCAL_SHARED_LIBRARIES := \
-    libcommon_time_client \
     libcutils \
     liblog \
     libutils \
