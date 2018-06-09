@@ -45,5 +45,8 @@ ro.product.first_api_level=21
 # Keep secure decoders in mediaserver process
 media.stagefright.less-secure=true
 
+## Vendor security patch level
+ro.lineage.build.vendor_security_patch=2017-11-05
+
 ## Vold
 ro.vold.wipe_on_crypt_fail=1
