@@ -37,6 +37,7 @@ etc/firmware/vsp.bin.0008.0000.0002
 etc/firmware/vsp.bin.0008.0002.0001
 etc/firmware/vsp.bin.000c.0001.0001
 etc/permissions/com.google.widevine.software.drm.xml
+etc/permissions/nrdp.modelgroup.xml
 etc/vp9_interpredict.binary
 etc/wifi/bcmdhd.cal
 etc/wifi/bcmdhd_sr2.cal
@@ -54,7 +55,6 @@ lib/arm/libaudioutils.so
 lib/arm/libbacktrace.so
 lib/arm/libbase.so
 lib/arm/libbcinfo.so
-lib/arm/libbinary_parse.so
 lib/arm/libbinder.so
 lib/arm/libblas.so
 lib/arm/libcamera2ndk.so
@@ -72,7 +72,6 @@ lib/arm/libEGL.so
 lib/arm/libETC1.so
 lib/arm/libexpat.so
 lib/arm/libft2.so
-lib/arm/libgabi++.so
 lib/arm/libGLESv1_CM.so
 lib/arm/libGLESv2.so
 lib/arm/libGLESv3.so
@@ -104,6 +103,7 @@ lib/arm/libnetd_client.so
 lib/arm/libOpenMAXAL.so
 lib/arm/libOpenSLES.so
 lib/arm/libpackagelistparser.so
+lib/arm/libpcre2.so
 lib/arm/libpdfium.so
 lib/arm/libpiex.so
 lib/arm/libpixelflinger.so
@@ -130,7 +130,7 @@ lib/arm/libstagefright_foundation.so
 lib/arm/libstagefright_http_support.so
 lib/arm/libstagefright_omx.so
 lib/arm/libstagefright.so
-lib/arm/libstagefright_yuv.so
+lib/arm/libstagefright_xmlparser@1.0.so
 lib/arm/libstdc++.so
 lib/arm/libsurfaceflinger.so
 lib/arm/libsync.so
@@ -140,7 +140,6 @@ lib/arm/libusbhost.so
 lib/arm/libutils.so
 lib/arm/libvorbisidec.so
 lib/arm/libvulkan.so
-lib/arm/libwebrtc_audio_preprocessing.so
 lib/arm/libwebviewchromium_plat_support.so
 lib/arm/libwilhelm.so
 lib/arm/libz.so
@@ -170,7 +169,7 @@ lib/arm/nb/libm.so
 lib/arm/nb/libnativehelper.so
 lib/arm/nb/libOpenMAXAL.so
 lib/arm/nb/libOpenSLES.so
-lib/arm/nb/libpcre.so
+lib/arm/nb/libpcre2.so
 lib/arm/nb/libpixelflinger.so
 lib/arm/nb/libskia.so
 lib/arm/nb/libsqlite.so
@@ -183,7 +182,8 @@ lib/arm/nb/libz.so
 lib/libatv_audio.so
 lib/libbcc.so
 lib/libcommon_time_client.so
-lib/libDecoderVP9Hybrid.so
+lib/libdrmframework.so
+lib/libdrmframework_jni.so
 lib/libdx_cc7.so
 lib/libFFTEm.so
 lib/libfilterfw.so
@@ -209,11 +209,14 @@ lib/libnetutils.so
 lib/libnl.so
 lib/libOMXVideoDecoderAVCSecure.so
 lib/libopus.so
+lib/libpcre2.so
+lib/libpcrecpp.so
 -lib/libremotecontrolservice.so
 lib/libsepdrm_cc54.so
 lib/libstagefright_enc_common.so
 lib/libstlport-mfx.so
 lib/libsysutils.so
+lib/libwebrtc_audio_preprocessing.so
 
 lib/hw/hdmi_cec.fugu.so
 lib/hw/keystore.moorefield.so
@@ -233,19 +236,17 @@ vendor/firmware/BCM4350C0.hcd
 vendor/firmware/BCM4350C0_SR2.hcd
 vendor/firmware/PR-ModelCert
 vendor/firmware/rgx.fw.signed.1.72.4.12
-vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/egl/libEGL_POWERVR_ROGUE.so
 vendor/lib/egl/libGLESv1_CM_POWERVR_ROGUE.so
 vendor/lib/egl/libGLESv2_POWERVR_ROGUE.so
 vendor/lib/hw/gralloc.moorefield.so
 vendor/lib/hw/memtrack.moorefield.so
 vendor/lib/hw/vulkan.moorefield.so
-vendor/lib/libdrmdecrypt.so
+vendor/lib/libDecoderVP9Hybrid.so
 vendor/lib/libeffects.so
 vendor/lib/libglslcompiler.so
 vendor/lib/libIMGegl.so
 vendor/lib/liboemcrypto.so
-vendor/lib/libpvrANDROID_WSEGL.so
 vendor/lib/libpvrcpt.so
 vendor/lib/libPVRRS.sha1.so
 vendor/lib/libPVRRS.so
@@ -254,8 +255,6 @@ vendor/lib/libseppr_hal.so
 vendor/lib/libsrv_um.so
 vendor/lib/libufwriter.so
 vendor/lib/libusc.so
-vendor/lib/libwvdrm_L1.so
-vendor/lib/libwvm.so
-vendor/lib/libWVStreamControlAPI_L1.so
+vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libplayreadydrmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
