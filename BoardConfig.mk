@@ -42,7 +42,12 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 MALLOC_SVELTE := true
 
-# Kernel cmdline
+# Kernel
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := x86_64-linux-android-
+TARGET_KERNEL_CONFIG := lineage_fugu_defconfig
+TARGET_KERNEL_SOURCE := kernel/asus/fugu
+TARGET_KERNEL_ARCH := x86_64
+BOARD_KERNEL_IMAGE_NAME := bzImage
 BOARD_KERNEL_CMDLINE := pci=noearly vmalloc=256M ptrace.ptrace_can_access=1
 BOARD_KERNEL_CMDLINE += earlyprintk=nologger loglevel=8
 BOARD_KERNEL_CMDLINE += androidboot.hardware=fugu androidboot.serialno=01234567890123456789
@@ -148,3 +153,6 @@ DONT_UNCOMPRESS_PRIV_APPS_DEXS := true
 # Vendor Interface Manifest
 DEVICE_MANIFEST_FILE := device/asus/fugu/manifest.xml
 DEVICE_MATRIX_FILE := device/asus/fugu/compatibility_matrix.xml
+
+# Inherit Vendor Version
+-include vendor/google/marlin/BoardConfigVendor.mk
