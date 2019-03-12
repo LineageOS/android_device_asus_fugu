@@ -123,9 +123,10 @@ on post-fs
 
 on post-fs-data
     # Create the directories used by the Wireless subsystem
-    mkdir /data/misc/wifi 0770 wifi wifi
-    mkdir /data/misc/wifi/sockets 0770 wifi wifi
-    mkdir /data/misc/dhcp 0770 dhcp wifi
+    mkdir /data/vendor/wifi 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
+    mkdir /data/vendor/dhcp 0770 dhcp wifi
 
     # Bluetooth
     setprop ro.bt.bdaddr_path "/factory/bt/bd_addr.conf"
@@ -189,7 +190,7 @@ on property:init.post_fs_data.bootreason=panic
 
 service wpa_supplicant /system/vendor/bin/hw/wpa_supplicant \
    -puse_p2p_group_interface=1p2p_device=1use_multi_chan_concurrent=1 \
-   -O/data/misc/wifi/sockets \
+   -O/data/vendor/wifi/wpa/sockets \
    -g@android:wpa_wlan0
     interface android.hardware.wifi.supplicant@1.0::ISupplicant default
     interface android.hardware.wifi.supplicant@1.1::ISupplicant default
