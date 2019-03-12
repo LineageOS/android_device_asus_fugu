@@ -101,6 +101,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gpu/powervr.ini:system/etc/powervr.ini
 
+## USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service.basic
+
 ## HDMI-CEC
 PRODUCT_PACKAGES += \
     android.hardware.tv.cec@1.0-impl
