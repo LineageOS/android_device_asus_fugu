@@ -250,7 +250,8 @@ PRODUCT_PACKAGES += \
     bcmdhd_sr2.cal
 
 PRODUCT_COPY_FILES += \
-    device/asus/fugu/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
+    device/asus/fugu/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf \
+    $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
