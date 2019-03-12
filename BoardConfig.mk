@@ -61,6 +61,9 @@ BOARD_KERNEL_CMDLINE += loop.max_part=7
 # Binder API version
 TARGET_USES_64_BIT_BINDER := true
 
+# Fonts
+EXCLUDE_SERIF_FONTS := true
+
 # Security
 BUILD_WITH_SECURITY_FRAMEWORK := chaabi_token
 BUILD_WITH_CHAABI_SUPPORT := true
