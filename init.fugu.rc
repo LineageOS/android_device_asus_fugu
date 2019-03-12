@@ -84,6 +84,9 @@ on boot
     # Wifi firmware reload path
     chown wifi wifi /sys/module/bcmdhd/parameters/firmware_path
 
+    # Use the group Wi-Fi Direct interface on bcm43xx
+    setprop wifi.direct.interface p2p-dev-wlan0
+
 on post-fs
     # Performance tweaks for interactive governor
     chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
