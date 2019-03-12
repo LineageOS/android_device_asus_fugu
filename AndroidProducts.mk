@@ -16,4 +16,5 @@
 
 PRODUCT_MAKEFILES := \
      $(LOCAL_DIR)/aosp_fugu.mk \
-     $(LOCAL_DIR)/full_fugu.mk
+     $(LOCAL_DIR)/full_fugu.mk \
+     $(LOCAL_DIR)/lineage_fugu.mk
