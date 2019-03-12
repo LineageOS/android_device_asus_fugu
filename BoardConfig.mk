@@ -62,6 +62,9 @@ USE_INTEL_SECURE_AVC := true
 ## DroidBoot
 TARGET_DROIDBOOT_LIBS := libintel_droidboot
 
+## Fonts
+EXCLUDE_SERIF_FONTS := true
+
 ## Graphics
 BOARD_EGL_CFG := $(DEVICE_PATH)/gpu/egl.cfg
 BOARD_GFX_REV := RGX6400
