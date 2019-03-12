@@ -65,6 +65,11 @@ TARGET_USES_64_BIT_BINDER := true
 BUILD_WITH_SECURITY_FRAMEWORK := chaabi_token
 BUILD_WITH_CHAABI_SUPPORT := true
 
+# TWRP
+ifeq ($(WITH_TWRP),true)
+-include device/asus/fugu/twrp.mk
+endif
+
 # Wifi
 BOARD_WLAN_DEVICE := bcmdhd
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
