@@ -90,6 +90,9 @@ PRODUCT_PROPERTY_OVERRIDES += ro.hdmi.set_menu_language=false
 # Keep secure decoders in mediaserver process
 PRODUCT_PROPERTY_OVERRIDES += media.stagefright.less-secure=true
 
+# Set the prop to enable arm native bridge
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.dalvik.vm.native.bridge=libhoudini.so
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     bt_bcm4354
