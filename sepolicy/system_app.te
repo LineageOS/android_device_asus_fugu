@@ -1,7 +1,6 @@
 allow priv_app device:dir open;
 allow priv_app proc_interrupts:file open;
 allow priv_app zygote:dir search;
-allow priv_app zygote:file { open read };
 allow system_app wificond:binder call;
 allow system_app sysfs_thermal_writable:file rw_file_perms;
 allow system_app sysfs_coretemp:file rw_file_perms;
