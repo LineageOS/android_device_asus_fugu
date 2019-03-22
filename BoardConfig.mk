@@ -20,6 +20,7 @@ DEVICE_PATH := device/asus/fugu
 -include device/intel/common/external/external.mk
 -include vendor/asus/fugu/BoardConfigVendor.mk
 -include vendor/intel/fugu/BoardConfigVendor.mk
+-include vendor/asus/fugu/BoardConfigVendor.mk
 
 ## Architecture
 TARGET_ARCH := x86
