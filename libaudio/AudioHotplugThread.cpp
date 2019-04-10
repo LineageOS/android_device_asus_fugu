@@ -252,12 +252,12 @@ void AudioHotplugThread::scanForDevice()
         return;
 
     while (true) {
-        struct dirent entry, *result;
-        int ret = readdir_r(alsaDir, &entry, &result);
-        if (ret != 0 || result == NULL)
+        struct dirent *entry;
+        entry = readdir(alsaDir);
+        if (entry == NULL)
             break;
         unsigned int pcmCard, pcmDevice;
-        if (parseCaptureDeviceName(entry.d_name, &pcmCard, &pcmDevice)) {
+        if (parseCaptureDeviceName(entry->d_name, &pcmCard, &pcmDevice)) {
             if (getDeviceInfo(pcmCard, pcmDevice, &deviceInfo)) {
                 mCallback.onDeviceFound(deviceInfo);
             }
