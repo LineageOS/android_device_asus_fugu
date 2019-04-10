@@ -43,7 +43,8 @@ LOCAL_SHARED_LIBRARIES := \
     libbinder \
     libtinyalsa \
     libaudiospdif \
-    libaudioutils
+    libaudioutils \
+    libcommon_time_client
 
 # until remotecontrolservice is added to PDK, don't include
 # this in aosp_fugu builds.  only use in regular fugu builds.
