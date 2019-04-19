@@ -281,6 +281,7 @@ PRODUCT_PACKAGES += \
 
 ## Wi-Fi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     bcmdhd.cal \
     bcmdhd_sr2.cal \
     hostapd \
