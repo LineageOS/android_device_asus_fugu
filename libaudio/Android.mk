@@ -130,7 +130,7 @@ LOCAL_SHARED_LIBRARIES += \
 LOCAL_CFLAGS += -DREMOTE_CONTROL_INTERFACE
 endif
 
-LOCAL_MODULE := libaudiopolicymanager
+LOCAL_MODULE := libaudiopolicymanager.fugu
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_CFLAGS += -Werror
