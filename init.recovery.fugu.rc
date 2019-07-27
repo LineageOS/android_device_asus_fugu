@@ -6,6 +6,9 @@ on init
     # /dev/block/by-name so that we can use the same fstabs everywhere.
     symlink /dev/block/pci/pci0000:00/0000:00:01.0/by-name /dev/block/by-name
 
+on fs
+    setprop sys.usb.ffs.aio_compat 1
+
 # interval:60s margin:20s
 service watchdogd /sbin/watchdogd 60 20
     oneshot
