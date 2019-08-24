@@ -1,12 +1,15 @@
-# Boot animation
+# Boot Animation
 TARGET_SCREEN_HEIGHT := 1080
 TARGET_SCREEN_WIDTH := 1920
 
-# Inherit some common Lineage stuff.
+# Inherit some common AOSP stuff
+$(call inherit-product, device/google/atv/products/atv_base.mk)
+
+# Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_tv.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/asus/fugu/aosp_fugu.mk)
+$(call inherit-product, device/asus/fugu/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
