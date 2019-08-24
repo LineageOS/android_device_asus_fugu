@@ -24,8 +24,8 @@ TARGET_CPU_ABI2 := armeabi-v7a
 TARGET_CPU_ABI_LIST := x86,armeabi-v7a,armeabi
 TARGET_CPU_ABI_LIST_32_BIT := x86,armeabi-v7a,armeabi
 
-TARGET_RECOVERY_FSTAB := device/asus/fugu/recovery.fstab
-TARGET_RELEASETOOLS_EXTENSIONS := device/asus/fugu
+TARGET_RECOVERY_FSTAB := device/asus/fugu/recovery/root/recovery.fstab
+TARGET_RELEASETOOLS_EXTENSIONS := device/asus/fugu/releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_fugu
 TARGET_RECOVERY_UI_LIB := librecovery_ui_fugu
 
@@ -109,7 +109,7 @@ BOARD_USES_TINY_ALSA_AUDIO := true
 VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 5000000
 
-BOARD_EGL_CFG := device/asus/fugu/egl.cfg
+BOARD_EGL_CFG := device/asus/fugu/gpu/egl.cfg
 
 MAX_EGL_CACHE_ENTRY_SIZE := 65536
 MAX_EGL_CACHE_SIZE := 1048576
