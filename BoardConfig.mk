@@ -1,5 +1,6 @@
 #
-# Copyright 2013 The Android Open-Source Project
+# Copyright 2013-2018 The Android Open-Source Project
+# Copyright 2015-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,8 +22,9 @@ TARGET_ARCH := x86
 TARGET_ARCH_VARIANT := silvermont
 TARGET_CPU_ABI := x86
 
-TARGET_RECOVERY_FSTAB := device/asus/fugu/recovery.fstab
-TARGET_RELEASETOOLS_EXTENSIONS := device/asus/fugu
+TARGET_RECOVERY_DEVICE_DIRS += device/asus/fugu
+TARGET_RECOVERY_FSTAB := device/asus/fugu/recovery/root/recovery.fstab
+TARGET_RELEASETOOLS_EXTENSIONS := device/asus/fugu/releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_fugu
 TARGET_RECOVERY_UI_LIB := librecovery_ui_fugu
 
@@ -93,7 +95,7 @@ BOARD_USES_TINY_ALSA_AUDIO := true
 VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 5000000
 
-BOARD_EGL_CFG := device/asus/fugu/egl.cfg
+BOARD_EGL_CFG := device/asus/fugu/gpu/egl.cfg
 
 MAX_EGL_CACHE_ENTRY_SIZE := 65536
 MAX_EGL_CACHE_SIZE := 1048576

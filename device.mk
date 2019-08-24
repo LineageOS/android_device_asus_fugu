@@ -1,5 +1,6 @@
 #
-# Copyright 2013 The Android Open-Source Project
+# Copyright 2013-2018 The Android Open-Source Project
+# Copyright 2015-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -67,11 +68,11 @@ DEVICE_PACKAGE_OVERLAYS := \
     device/asus/fugu/overlay
 
 PRODUCT_COPY_FILES += \
-    device/asus/fugu/fstab.fugu:root/fstab.fugu \
-    device/asus/fugu/init.fugu.rc:root/init.fugu.rc \
-    device/asus/fugu/init.fugu.usb.rc:root/init.fugu.usb.rc \
-    device/asus/fugu/ueventd.fugu.rc:root/ueventd.fugu.rc \
-    device/asus/fugu/init.recovery.fugu.rc:root/init.recovery.fugu.rc
+    device/asus/fugu/rootdir/fstab.fugu:root/fstab.fugu \
+    device/asus/fugu/rootdir/init.fugu.rc:root/init.fugu.rc \
+    device/asus/fugu/rootdir/init.fugu.usb.rc:root/init.fugu.usb.rc \
+    device/asus/fugu/rootdir/ueventd.fugu.rc:root/ueventd.fugu.rc \
+    device/asus/fugu/recovery/root/init.recovery.fugu.rc:root/init.recovery.fugu.rc
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -100,7 +101,7 @@ USE_XML_AUDIO_POLICY_CONF := 1
 
 # specific management of audio_policy.conf
 PRODUCT_COPY_FILES += \
-    device/asus/fugu/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    device/asus/fugu/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
@@ -125,7 +126,7 @@ PRODUCT_PACKAGES += \
     bt_bcm4354
 
 PRODUCT_COPY_FILES += \
-    device/asus/fugu/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+    device/asus/fugu/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
@@ -148,16 +149,16 @@ PRODUCT_PACKAGES += \
 
 # Video
 PRODUCT_COPY_FILES += \
-    device/asus/fugu/media_profiles.xml:system/etc/media_profiles.xml \
-    device/asus/fugu/wrs_omxil_components.list:system/etc/wrs_omxil_components.list \
+    device/asus/fugu/media/media_profiles.xml:system/etc/media_profiles.xml \
+    device/asus/fugu/media/wrs_omxil_components.list:system/etc/wrs_omxil_components.list \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_tv.xml:system/etc/media_codecs_google_tv.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
-    device/asus/fugu/media_codecs.xml:system/etc/media_codecs.xml \
-    device/asus/fugu/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    device/asus/fugu/mfx_omxil_core.conf:system/etc/mfx_omxil_core.conf \
-    device/asus/fugu/video_isv_profile.xml:system/etc/video_isv_profile.xml \
-    device/asus/fugu/codec_resources_limitation.xml:system/etc/codec_resources_limitation.xml
+    device/asus/fugu/media/media_codecs.xml:system/etc/media_codecs.xml \
+    device/asus/fugu/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+    device/asus/fugu/media/mfx_omxil_core.conf:system/etc/mfx_omxil_core.conf \
+    device/asus/fugu/media/video_isv_profile.xml:system/etc/video_isv_profile.xml \
+    device/asus/fugu/media/codec_resources_limitation.xml:system/etc/codec_resources_limitation.xml
 
 # Default OMX service to non-Treble
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -260,7 +261,7 @@ PRODUCT_PACKAGES += \
     bcmdhd_sr2.cal
 
 PRODUCT_COPY_FILES += \
-    device/asus/fugu/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
+    device/asus/fugu/wifi/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
@@ -274,17 +275,17 @@ PRODUCT_COPY_FILES += \
 
 # Key layout files
 PRODUCT_COPY_FILES += \
-    device/asus/fugu/Nexus_Remote.idc:system/usr/idc/Nexus_Remote.idc \
-    device/asus/fugu/gpio-keys.idc:system/usr/idc/gpio-keys.idc \
-    device/asus/fugu/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    device/asus/fugu/gpio-keys.kcm:system/usr/keychars/gpio-keys.kcm \
-    device/asus/fugu/Spike.kl:system/usr/keylayout/Spike.kl \
-    device/asus/fugu/Nexus_Remote.kl:system/usr/keylayout/Nexus_Remote.kl \
-    device/asus/fugu/Generic.kl:system/usr/keylayout/Generic.kl
+    device/asus/fugu/keylayouts/Nexus_Remote.idc:system/usr/idc/Nexus_Remote.idc \
+    device/asus/fugu/keylayouts/gpio-keys.idc:system/usr/idc/gpio-keys.idc \
+    device/asus/fugu/keylayouts/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/asus/fugu/keylayouts/gpio-keys.kcm:system/usr/keychars/gpio-keys.kcm \
+    device/asus/fugu/keylayouts/Spike.kl:system/usr/keylayout/Spike.kl \
+    device/asus/fugu/keylayouts/Nexus_Remote.kl:system/usr/keylayout/Nexus_Remote.kl \
+    device/asus/fugu/keylayouts/Generic.kl:system/usr/keylayout/Generic.kl
 
 #GFX Config
 PRODUCT_COPY_FILES += \
-    device/asus/fugu/powervr.ini:system/etc/powervr.ini \
+    device/asus/fugu/gpu/powervr.ini:system/etc/powervr.ini \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:system/etc/permissions/android.hardware.vulkan.level-0.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version-1_0_3.xml
 
@@ -316,7 +317,7 @@ PRODUCT_PACKAGES += \
 # Debug rc files
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_COPY_FILES += \
-    device/asus/fugu/init.fugu.diag.rc.userdebug:root/init.fugu.diag.rc
+    device/asus/fugu/rootdir/init.fugu.diag.rc.userdebug:root/init.fugu.diag.rc
 endif
 
 $(call inherit-product-if-exists, vendor/asus/fugu/device-vendor.mk)
@@ -328,13 +329,13 @@ $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4354
 
 # specific management of sep_policy.conf
 PRODUCT_COPY_FILES += \
-    device/asus/fugu/sep_policy.conf:system/etc/security/sep_policy.conf
+    device/asus/fugu/sep/sep_policy.conf:system/etc/security/sep_policy.conf
 
 #PRODUCT_CHARACTERISTICS := tablet
 
 # Wifi country code
 PRODUCT_COPY_FILES += \
-    device/asus/fugu/init.fugu.countrycode.sh:system/bin/init.fugu.countrycode.sh
+    device/asus/fugu/rootdir/init.fugu.countrycode.sh:system/bin/init.fugu.countrycode.sh
 
 # Some CTS tests will be skipped based on what the initial API level that
 # shipped on device was.
