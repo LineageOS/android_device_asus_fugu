@@ -1,0 +1,49 @@
+## Audio
+media.aac_51_output_enabled=true
+
+## DPI
+# xhdpi, while we are hardcoding the 1080 resolution.
+# when we start doing 720 as well, will need to stop hardcoding this.
+ro.sf.lcd_density=320
+
+## Dalvik
+# Override specific properties based on stock values
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapgrowthlimit=128m
+dalvik.vm.heapsize=174m
+dalvik.vm.implicit_checks=none
+
+## DRM
+drm.service.enabled=true
+ro.com.widevine.cachesize=16777216
+
+## HDMI
+# CEC: Fugu works as a playback device (4).
+ro.hdmi.device_type=4
+# CEC: Disable 'Set Menu Language' feature.
+ro.hdmi.set_menu_language=false
+
+## Houdini
+ro.dalvik.vm.isa.arm=x86
+ro.enable.native.bridge.exec=1
+
+## NRDP
+# For Netflix compatibility in the Play Store
+ro.nrdp.modelgroup=NEXUSPLAYERFUGU
+
+## OMX
+media.stagefright.cache-params=10240/20480/15
+# Set service to non-Treble
+persist.media.treble_omx=false
+
+## Shipping API Level
+# Some CTS tests will be skipped based on what the initial API level that
+# shipped on device was.
+ro.product.first_api_level=21
+
+## Stagefright
+# Keep secure decoders in mediaserver process
+media.stagefright.less-secure=true
+
+## Vold
+ro.vold.wipe_on_crypt_fail=1
