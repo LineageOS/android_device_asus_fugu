@@ -1,5 +1,6 @@
 #
 # Copyright 2013 The Android Open-Source Project
+# Copyright 2017-2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,156 +15,215 @@
 # limitations under the License.
 #
 
-# Need AppWidget permission to prevent from Launcher's crash.
-# TODO(pattjin): Remove this when the TV Launcher is used, which does not support AppWidget.
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.app_widgets.xml:system/etc/permissions/android.software.app_widgets.xml
-
+# AAPT
 PRODUCT_AAPT_CONFIG := normal large xlarge hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
-# xhdpi, while we are hardcoding the 1080 resolution.
-# when we start doing 720 as well, will need to stop hardcoding this.
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=320
-
-# There may be a cleaner way to do this.
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapstartsize=8m \
-    dalvik.vm.heapgrowthlimit=128m \
-    dalvik.vm.heapsize=174m
-
-$(call inherit-product-if-exists, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
-
-PRODUCT_CHARACTERISTICS := nosdcard,tv
-
-DEVICE_PACKAGE_OVERLAYS += \
-    device/asus/fugu/overlay
-
-PRODUCT_COPY_FILES += \
-    device/asus/fugu/rootdir/fstab.fugu:root/fstab.fugu \
-    device/asus/fugu/rootdir/init.fugu.rc:root/init.fugu.rc \
-    device/asus/fugu/rootdir/init.fugu.usb.rc:root/init.fugu.usb.rc \
-    device/asus/fugu/rootdir/ueventd.fugu.rc:root/ueventd.fugu.rc
-
 # Audio
 PRODUCT_PACKAGES += \
-    libtinyalsa \
+    audio.a2dp.default \
     audio.primary.fugu \
     audio.stub.default \
-    audio.usb.default \
-    audio.a2dp.default \
     audio.r_submix.default \
-    libaudio-resampler
+    audio.usb.default \
+    libaudio-resampler \
+    libtinyalsa
 
+# Audio Effects
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
     android.hardware.audio.effect@2.0-impl
 
-# Keymaster HAL
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl
-
-# Dumpstate HAL
-PRODUCT_PACKAGES += \
-    android.hardware.dumpstate@1.0-service.fugu
-
+# Audio Policy
 USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
-
-# specific management of audio_policy.conf
 PRODUCT_COPY_FILES += \
     device/asus/fugu/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
-    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml
-
-# Hdmi CEC: Fugu works as a playback device (4).
-PRODUCT_PROPERTY_OVERRIDES += ro.hdmi.device_type=4
-
-# Hdmi CEC: Disable 'Set Menu Language' feature.
-PRODUCT_PROPERTY_OVERRIDES += ro.hdmi.set_menu_language=false
-
-# Keep secure decoders in mediaserver process
-PRODUCT_PROPERTY_OVERRIDES += media.stagefright.less-secure=true
-
-# Set the prop to enable arm native bridge
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.dalvik.vm.native.bridge=libhoudini.so
-
-# Stock Properties
-PRODUCT_PROPERTY_OVERRIDES +=  \
-    ro.dalvik.vm.isa.arm=x86 \
-    ro.enable.native.bridge.exec=1 \
-    ro.vold.wipe_on_crypt_fail=1 \
-    ro.nrdp.modelgroup=NEXUSPLAYERFUGU \
-    drm.service.enabled=true \
-    ro.com.widevine.cachesize=16777216 \
-    media.stagefright.cache-params=10240/20480/15 \
-    media.aac_51_output_enabled=true \
-    dalvik.vm.implicit_checks=none
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    bt_bcm4354
+    android.hardware.bluetooth@1.0-impl \
+    bt_bcm4354 \
+    libbt-vendor
 
 PRODUCT_COPY_FILES += \
     device/asus/fugu/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
-# Bluetooth HAL
-PRODUCT_PACKAGES += \
-    libbt-vendor \
-    android.hardware.bluetooth@1.0-impl
+# Characteristics
+PRODUCT_CHARACTERISTICS := nosdcard,tv
 
-# IMG graphics
+# Codecs
+PRODUCT_COPY_FILES += \
+    device/asus/fugu/media/codec_resources_limitation.xml:system/etc/codec_resources_limitation.xml \
+    device/asus/fugu/media/media_codecs.xml:system/etc/media_codecs.xml \
+    device/asus/fugu/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+    device/asus/fugu/media/media_profiles.xml:system/etc/media_profiles.xml \
+    device/asus/fugu/media/mfx_omxil_core.conf:system/etc/mfx_omxil_core.conf \
+    device/asus/fugu/media/video_isv_profile.xml:system/etc/video_isv_profile.xml \
+    device/asus/fugu/media/wrs_omxil_components.list:system/etc/wrs_omxil_components.list \
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_tv.xml:system/etc/media_codecs_google_tv.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+    libdrm \
+    dristat \
+    drmstat
+
+# Dumpstate
+PRODUCT_PACKAGES += \
+    android.hardware.dumpstate@1.0-service.fugu
+
+# Graphics
 PRODUCT_PACKAGES += \
     IMG_graphics \
-    hwcomposer.moorefield
+    hwcomposer.moorefield \
+    libion
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.mapper@2.0-impl
 
-# RenderScript HAL
+PRODUCT_COPY_FILES += \
+    device/asus/fugu/gpu/powervr.ini:system/etc/powervr.ini
+
+# HDMI-CEC
+PRODUCT_PACKAGES += \
+    android.hardware.tv.cec@1.0-impl
+
+# Keylayouts
+PRODUCT_COPY_FILES += \
+    device/asus/fugu/keylayouts/Generic.kl:system/usr/keylayout/Generic.kl \
+    device/asus/fugu/keylayouts/gpio-keys.idc:system/usr/idc/gpio-keys.idc \
+    device/asus/fugu/keylayouts/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/asus/fugu/keylayouts/gpio-keys.kcm:system/usr/keychars/gpio-keys.kcm \
+    device/asus/fugu/keylayouts/Nexus_Remote.idc:system/usr/idc/Nexus_Remote.idc \
+    device/asus/fugu/keylayouts/Nexus_Remote.kl:system/usr/keylayout/Nexus_Remote.kl \
+    device/asus/fugu/keylayouts/Spike.kl:system/usr/keylayout/Spike.kl
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl
+
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl
+
+# OMX
+PRODUCT_PACKAGES += \
+    libgabi++-mfx \
+    libisv_omx_core \
+    libmfxsw32 \
+    libmfx_omx_core \
+    libmfx_omx_components_sw \
+    libmixvbp_mpeg4 \
+    libmixvbp_h264 \
+    libmixvbp_h264secure \
+    libmixvbp_vc1 \
+    libmixvbp_vp8 \
+    libmixvbp_mpeg2 \
+    libmixvbp \
+    libOMXVideoDecoderAVC \
+    libOMXVideoDecoderH263 \
+    libOMXVideoDecoderMPEG2 \
+    libOMXVideoDecoderMPEG4 \
+    libOMXVideoDecoderWMV \
+    libOMXVideoDecoderVP8 \
+    libOMXVideoDecoderVP9HWR \
+    libOMXVideoDecoderVP9Hybrid \
+    libOMXVideoEncoderAVC \
+    libOMXVideoEncoderH263 \
+    libOMXVideoEncoderMPEG4 \
+    libOMXVideoEncoderVP8 \
+    libstlport-mfx \
+    libva_videodecoder \
+    libva_videoencoder \
+    libwrs_omxil_common \
+    libwrs_omxil_core_pvwrapped
+
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    device/asus/fugu/overlay
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
+    frameworks/native/data/etc/android.hardware.hdmi.cec.xml:system/etc/permissions/android.hardware.hdmi.cec.xml \
+    frameworks/native/data/etc/android.hardware.location.xml:system/etc/permissions/android.hardware.location.xml \
+    frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
+    frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:system/etc/permissions/android.hardware.vulkan.level-0.xml \
+    frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version-1_0_3.xml \
+    frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
+    frameworks/native/data/etc/android.software.app_widgets.xml:system/etc/permissions/android.software.app_widgets.xml \
+    frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml
+
+# Power
+PRODUCT_PACKAGES += \
+    power.fugu \
+    android.hardware.power@1.0-impl
+
+# Ramdisk
+PRODUCT_COPY_FILES += \
+    device/asus/fugu/rootdir/fstab.fugu:root/fstab.fugu \
+    device/asus/fugu/rootdir/init.fugu.rc:root/init.fugu.rc \
+    device/asus/fugu/rootdir/init.fugu.countrycode.sh:system/bin/init.fugu.countrycode.sh \
+    device/asus/fugu/rootdir/init.fugu.usb.rc:root/init.fugu.usb.rc \
+    device/asus/fugu/rootdir/ueventd.fugu.rc:root/ueventd.fugu.rc
+
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+PRODUCT_COPY_FILES += \
+    device/asus/fugu/rootdir/init.fugu.diag.rc.userdebug:root/init.fugu.diag.rc
+endif
+
+# RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
+
+# SEP
+PRODUCT_COPY_FILES += \
+    device/asus/fugu/sep/sep_policy.conf:system/etc/security/sep_policy.conf
+
+# Stagefright
+PRODUCT_PACKAGES += \
+    libstagefrighthw
+
+# System Properties
+-include device/asus/fugu/system_prop.mk
+
+# Thermal
+ENABLE_ITUXD := true
+
+PRODUCT_PACKAGES += \
+    ituxd
+
+# TV Input
+PRODUCT_PACKAGES += \
+    android.hardware.tv.input@1.0-impl
 
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
 
 # Video
-PRODUCT_COPY_FILES += \
-    device/asus/fugu/media/media_profiles.xml:system/etc/media_profiles.xml \
-    device/asus/fugu/media/wrs_omxil_components.list:system/etc/wrs_omxil_components.list \
-    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_tv.xml:system/etc/media_codecs_google_tv.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
-    device/asus/fugu/media/media_codecs.xml:system/etc/media_codecs.xml \
-    device/asus/fugu/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    device/asus/fugu/media/mfx_omxil_core.conf:system/etc/mfx_omxil_core.conf \
-    device/asus/fugu/media/video_isv_profile.xml:system/etc/video_isv_profile.xml \
-    device/asus/fugu/media/codec_resources_limitation.xml:system/etc/codec_resources_limitation.xml
-
-# Default OMX service to non-Treble
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.media.treble_omx=false
-
-# psb video
 PRODUCT_PACKAGES += \
-    pvr_drv_video
+    libpvr2d \
+    libva \
+    libva-android \
+    libva-tpi \
+    pvr_drv_video \
+    vainfo
 
-# Media SDK and OMX IL components
-PRODUCT_PACKAGES += \
-    libmfxsw32 \
-    libmfx_omx_core \
-    libmfx_omx_components_sw \
-    libgabi++-mfx \
-    libstlport-mfx
-
-#video firmware
+# Video Firmware
 PRODUCT_PACKAGES += \
     msvdx.bin.0008.0000.0000 \
     msvdx.bin.0008.0000.0001 \
@@ -180,174 +240,27 @@ PRODUCT_PACKAGES += \
     vsp.bin.0008.0000.0002 \
     vsp.bin.0008.0002.0001 \
     vsp.bin.000c.0001.0001
-# libva
-PRODUCT_PACKAGES += \
-    libva \
-    libva-android \
-    libva-tpi \
-    vainfo
 
-#libstagefrighthw
-PRODUCT_PACKAGES += \
-    libstagefrighthw
-
-# libmix
-PRODUCT_PACKAGES += \
-    libmixvbp_mpeg4 \
-    libmixvbp_h264 \
-    libmixvbp_h264secure \
-    libmixvbp_vc1 \
-    libmixvbp_vp8 \
-    libmixvbp_mpeg2 \
-    libmixvbp \
-    libva_videodecoder \
-    libva_videoencoder
-
-PRODUCT_PACKAGES += \
-    libwrs_omxil_common \
-    libwrs_omxil_core_pvwrapped \
-    libOMXVideoDecoderAVC \
-    libOMXVideoDecoderH263 \
-    libOMXVideoDecoderMPEG4 \
-    libOMXVideoDecoderWMV \
-    libOMXVideoDecoderVP8 \
-    libOMXVideoDecoderMPEG2 \
-    libOMXVideoDecoderVP9HWR \
-    libOMXVideoDecoderVP9Hybrid \
-    libOMXVideoEncoderAVC \
-    libOMXVideoEncoderH263 \
-    libOMXVideoEncoderMPEG4 \
-    libOMXVideoEncoderVP8
-
-#libISV
-PRODUCT_PACKAGES += libisv_omx_core
-
-# pvr
-PRODUCT_PACKAGES += \
-    libpvr2d
-
-# libdrm
-PRODUCT_PACKAGES += \
-    libdrm \
-    dristat \
-    drmstat
-
-# libion
-PRODUCT_PACKAGES += \
-    libion
-
-# Wifi
+# Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
+    bcmdhd.cal \
+    bcmdhd_sr2.cal \
+    hostapd \
     libwpa_client \
     lib_driver_cmd_bcmdhd \
-    hostapd \
     wificond \
     wifilogd \
-    wpa_supplicant \
-    bcmdhd.cal \
-    bcmdhd_sr2.cal
+    wpa_supplicant
 
 PRODUCT_COPY_FILES += \
     device/asus/fugu/wifi/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
-    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
-    frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
-    frameworks/native/data/etc/android.hardware.location.xml:system/etc/permissions/android.hardware.location.xml \
-    frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
-    frameworks/native/data/etc/android.hardware.hdmi.cec.xml:system/etc/permissions/android.hardware.hdmi.cec.xml \
-    frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml
+# Wi-Fi Firmware
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4354/device-bcm.mk)
 
-# Key layout files
-PRODUCT_COPY_FILES += \
-    device/asus/fugu/keylayouts/Nexus_Remote.idc:system/usr/idc/Nexus_Remote.idc \
-    device/asus/fugu/keylayouts/gpio-keys.idc:system/usr/idc/gpio-keys.idc \
-    device/asus/fugu/keylayouts/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    device/asus/fugu/keylayouts/gpio-keys.kcm:system/usr/keychars/gpio-keys.kcm \
-    device/asus/fugu/keylayouts/Spike.kl:system/usr/keylayout/Spike.kl \
-    device/asus/fugu/keylayouts/Nexus_Remote.kl:system/usr/keylayout/Nexus_Remote.kl \
-    device/asus/fugu/keylayouts/Generic.kl:system/usr/keylayout/Generic.kl
-
-#GFX Config
-PRODUCT_COPY_FILES += \
-    device/asus/fugu/gpu/powervr.ini:system/etc/powervr.ini \
-    frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:system/etc/permissions/android.hardware.vulkan.level-0.xml \
-    frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version-1_0_3.xml
-
-# Thermal itux
-ENABLE_ITUXD := true
-PRODUCT_PACKAGES += \
-    ituxd
-
-# Memtrack HAL
-PRODUCT_PACKAGES += \
-    android.hardware.memtrack@1.0-impl
-
-# Power HAL
-PRODUCT_PACKAGES += \
-    power.fugu \
-    android.hardware.power@1.0-impl \
-
-# TV Input HAL
-PRODUCT_PACKAGES += \
-    android.hardware.tv.input@1.0-impl
-
-# HDMI CEC HAL
-PRODUCT_PACKAGES += \
-    android.hardware.tv.cec@1.0-impl
-
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl \
-
-# Debug rc files
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-PRODUCT_COPY_FILES += \
-    device/asus/fugu/rootdir/init.fugu.diag.rc.userdebug:root/init.fugu.diag.rc
-endif
-
+# Inherit proprietary-files
 $(call inherit-product-if-exists, vendor/asus/fugu/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/intel/PRIVATE/fugu/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/intel/moorefield/prebuilts/houdini/houdini.mk)
-
-# Add WiFi Firmware
-$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4354/device-bcm.mk)
-
-# specific management of sep_policy.conf
-PRODUCT_COPY_FILES += \
-    device/asus/fugu/sep/sep_policy.conf:system/etc/security/sep_policy.conf
-
-#PRODUCT_CHARACTERISTICS := tablet
-
-# Wifi country code
-PRODUCT_COPY_FILES += \
-    device/asus/fugu/rootdir/init.fugu.countrycode.sh:system/bin/init.fugu.countrycode.sh
-
-# Some CTS tests will be skipped based on what the initial API level that
-# shipped on device was.
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.first_api_level=21
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196609 \
-    ro.hwui.drop_shadow_cache_size=4.0 \
-    ro.hwui.gradient_cache_size=0.8 \
-    ro.hwui.layer_cache_size=32.0 \
-    ro.hwui.path_cache_size=24.0 \
-    ro.hwui.text_large_cache_width=2048 \
-    ro.hwui.text_large_cache_height=1024 \
-    ro.hwui.text_small_cache_width=1024 \
-    ro.hwui.text_small_cache_height=512 \
-    ro.hwui.texture_cache_flushrate=0.4 \
-    ro.hwui.texture_cache_size=48.0 \
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.intel.isv.vpp=1 \
-    persist.intel.isv.frc=1
-
-# Vendor security patch level
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2017-11-05
