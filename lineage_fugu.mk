@@ -13,7 +13,8 @@ $(call inherit-product, device/asus/fugu/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
-PRODUCT_MANUFACTURER := Asus
+PRODUCT_DEVICE := fugu
+PRODUCT_MANUFACTURER := ASUS
 PRODUCT_MODEL := Nexus Player
 PRODUCT_NAME := lineage_fugu
 
