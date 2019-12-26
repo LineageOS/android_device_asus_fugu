@@ -15,6 +15,8 @@
 # limitations under the License.
 #
 
+DEVICE_PATH := device/asus/fugu
+
 # Use the non-open-source parts, if they're present
 -include vendor/intel/fugu/BoardConfigVendor.mk
 
@@ -22,9 +24,9 @@ TARGET_ARCH := x86
 TARGET_ARCH_VARIANT := silvermont
 TARGET_CPU_ABI := x86
 
-TARGET_RECOVERY_DEVICE_DIRS += device/asus/fugu
-TARGET_RECOVERY_FSTAB := device/asus/fugu/recovery/root/recovery.fstab
-TARGET_RELEASETOOLS_EXTENSIONS := device/asus/fugu/releasetools
+TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/recovery.fstab
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_fugu
 TARGET_RECOVERY_UI_LIB := librecovery_ui_fugu
 
@@ -72,7 +74,7 @@ WIFI_DRIVER_FW_PATH_STA     := "/vendor/firmware/fw_bcmdhd.bin"
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/asus/fugu/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # IMG graphics
 BOARD_GFX_REV := RGX6400
@@ -95,7 +97,7 @@ BOARD_USES_TINY_ALSA_AUDIO := true
 VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 5000000
 
-BOARD_EGL_CFG := device/asus/fugu/gpu/egl.cfg
+BOARD_EGL_CFG := $(DEVICE_PATH)/gpu/egl.cfg
 
 MAX_EGL_CACHE_ENTRY_SIZE := 65536
 MAX_EGL_CACHE_SIZE := 1048576
@@ -133,7 +135,7 @@ INTEL_DPST := true
 # bootstub as 2nd bootloader
 TARGET_BOOTLOADER_IS_2ND := true
 
-BOARD_SEPOLICY_DIRS += device/asus/fugu/sepolicy
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Use the non-open-source parts, if they're present
 -include vendor/asus/fugu/BoardConfigVendor.mk
@@ -148,5 +150,5 @@ DONT_DEXPREOPT_PREBUILTS := true
 DONT_UNCOMPRESS_PRIV_APPS_DEXS := true
 
 # Vendor Interface Manifest
-DEVICE_MANIFEST_FILE := device/asus/fugu/manifest.xml
-DEVICE_MATRIX_FILE := device/asus/fugu/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
