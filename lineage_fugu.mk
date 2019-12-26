@@ -9,7 +9,7 @@ $(call inherit-product, device/google/atv/products/atv_base.mk)
 $(call inherit-product, vendor/lineage/config/common_full_tv.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/asus/fugu/device.mk)
+$(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
