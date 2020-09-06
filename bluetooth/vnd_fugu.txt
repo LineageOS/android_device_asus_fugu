@@ -1,0 +1,2 @@
+BLUETOOTH_UART_DEVICE_PORT = "/dev/ttyMFD0"
+FW_PATCHFILE_LOCATION = "/data/misc/bluedroid/"

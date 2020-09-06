@@ -57,9 +57,6 @@ PRODUCT_PACKAGES += \
     bt_bcm4354 \
     libbt-vendor
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
-
 ## Characteristics
 PRODUCT_CHARACTERISTICS := nosdcard,tv
 
