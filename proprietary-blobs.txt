@@ -224,7 +224,6 @@ lib/hw/keystore.moorefield.so
 -priv-app/AtvRemoteService/AtvRemoteService.apk
 -priv-app/GamepadPairingService/GamepadPairingService.apk
 -priv-app/GlobalKeyInterceptor/GlobalKeyInterceptor.apk
--priv-app/RemoteControlService/RemoteControlService.apk
 -priv-app/TV/TV.apk;PRESIGNED
 
 vendor/bin/hwperfbin2jsont
